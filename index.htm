@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
         <meta name="author" content="Peter Steinbach" />
-            <meta name="dcterms.date" content="2017-03-30" />
-        <title>ROCm with ROCr, right?</title>
-    <meta name="description" content="ROCm with ROCr, right?">
+            <meta name="dcterms.date" content="2017-05-11" />
+        <title>high-bandwidth 3D image compression to boost predictive life sciences (WIP)</title>
+    <meta name="description" content="high-bandwidth 3D image compression to boost predictive life sciences (WIP)">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -37,7 +37,7 @@
       <div class="slides">
 
 		<section>
-	  <h1 class="title">ROCm with ROCr, right?</h1>
+	  <h1 class="title">high-bandwidth 3D image compression to boost predictive life sciences (WIP)</h1>
 	  	  <p>
 	    <b>Peter Steinbach</b><br>
 	    <emph>(Scionics Computer Innovation GmbH)</emph><br>
@@ -45,10 +45,13 @@
 	    <br><br>
 	  </p>
 	  
-	  <h3 class="date">March 30, 2017</h3>
+	  <h3 class="date">May 11, 2017</h3>
 	</section>
 		
-	<section><section id="before-i-start" class="titleslide slide level1"><h1>Before I start</h1></section><section id="scionics-who" class="slide level2">
+	<section><section id="before-i-start" class="titleslide slide level1"><h1>Before I start</h1></section><section id="peter-jeffrey" class="slide level2">
+<h1>Peter != Jeffrey</h1>
+<p>My name is Jeffrey, but the author of these slides is Peter Steinbach!</p>
+</section><section id="scionics-who" class="slide level2">
 <h1>Scionics Who?</h1>
 <div class="row vertical-align">
 <div class="col-xs-6">
@@ -67,443 +70,23 @@
 </ul>
 </div>
 </div>
-</section><section id="why-parallel2017" class="slide level2">
-<h1>Why parallel2017?</h1>
-<div class="row">
-<div class="col-xs-4">
-<center>
-Nvidia Tesla<br />
-<img src="img/nvidia_tesla_p100_cropped_x400.png" />
-</center>
-</div>
-<div class="col-xs-4">
-<center>
-AMD FirePro<br />
-<img src="img/FirePro_S9300x2_x400.png" />
-</center>
-</div>
-<div class="col-xs-4">
-<center>
-Intel MIC<br />
-<img src="img/xeon_phi_x400.jpg" />
-</center>
-</div>
-</div>
-<center>
-<p><strong>What should our clients choose?</strong></p>
-Share experiences with ROCm/ROCr with community!
-</center>
-</section><section id="why-i-present" class="slide level2">
-<h1>Why I present?</h1>
-<center>
-<video width="1400" poster="video/Celegans_lateral_one_view_versus_deconvolved.png" controls loop>
-<source src="video/Celegans_lateral_one_view_versus_deconvolved.webm" type='video/webm; codecs="vp8.0, vorbis"'>
-<source src="video/Celegans_lateral_one_view_versus_deconvolved.mp4" type='video/mp4'>
-<p>
-Movie does not work! Sorry!
-</p>
-</video>
-<p><em>Accelerating <a href="http://www.nature.com/nmeth/journal/v11/n6/full/nmeth.2929.html">our clients' scientific algorithms</a> on <a href="https://github.com/psteinb/gtc2015.git">GPUs</a><br />
-(multi-GB dataset, a lot of FFTs)</em></p>
-</center>
 </section><section id="this-talk-is" class="slide level2">
 <h1>This Talk is</h1>
 <center>
 <figure>
 <img src="img/opensource-550x475.png" />
 </figure>
-<strong><a href="https://github.com/psteinb/parallel2017">github.com/psteinb/parallel2017</a></strong>
-</center>
-</section><section id="this-talk-advertisement" class="slide level2">
-<h1>This Talk != Advertisement</h1>
-<ul>
-<li>Our company is by no means financially tied to AMD nor any of it's resellers.</li>
-<li>AMD provided test hardware and that's it</li>
-<li>whatever I find missing or not working, I'll report it here</li>
-</ul>
-<p> </p>
-<center>
-<p><strong>Use the <a href="https://github.com/psteinb/parallel2017/issues">issue tracker</a> of this talk to correct me!</strong></p>
-<a href="https://github.com/psteinb/parallel2017">github.com/psteinb/parallel2017</a>
+<strong><a href="https://github.com/psteinb/gtc2017">github.com/psteinb/parallel2017</a></strong>
 </center>
 </section><section id="outline" class="slide level2">
 <h1>Outline</h1>
 <div style="font-size : 1.5em">
 <center>
 <ol type="1">
-<li><p>ROCm</p></li>
-<li><p>Porting Code from CUDA</p></li>
-<li>HC</li>
+<li><p>Scientific Motivation</p></li>
+<li><p>Sqeazy library</p></li>
+<li>Results</li>
 </ol>
-</center>
-</div>
-</section></section>
-<section><section id="rocm" class="titleslide slide level1"><h1>ROCm</h1></section><section id="radeon-open-compute-platform" class="slide level2">
-<h1>Radeon Open Compute Platform</h1>
-<div class="row">
-<div class="col-xs-4">
-<p><a href="http://gpuopen.com/compute-product/rocm/"><img src="img/rocm_logo_x400.png" /></a></p>
-</div>
-<div class="col-xs-8">
-</div>
-<ul>
-<li>very young:<br />
-<em>April 25th, 2016</em>, version 1.0</li>
-<li><p>3 main components:</p>
-<ul>
-<li><a href="http://gpuopen.com/compute-product/rocm/">ROCm</a> Linux kernel driver</li>
-<li><a href="https://github.com/RadeonOpenCompute/ROCR-Runtime">ROCr</a> runtime &amp; library stack</li>
-<li><a href="https://github.com/RadeonOpenCompute/hcc">HCC</a> compiler based on LLVM</li>
-</ul></li>
-</ul>
-<center>
-<strong>Open Source!</strong>
-</center>
-</div>
-</section><section id="rocm-kernel-driver" class="slide level2">
-<h1>ROCm kernel driver</h1>
-<div class="row">
-<div class="col-xs-4">
-<p><a href="http://www.amd.com/en-us/innovations/software-technologies/gcn"><img src="img/amd-gcn-2.0-hawaii_x400.png" /></a></p>
-</div>
-<div class="col-xs-8">
-<center>
-<ul>
-<li>supported GPUs: GFX8 GPU's ( Fiji &amp; Polaris Family)</li>
-<li><p>supported CPUs:</p>
-<ul>
-<li>Intel Xeon E3/E5, Core i3/5/7 Haswell or newer</li>
-<li>(upcoming) AMD Naples/Ryzen</li>
-<li>(upcoming) Cavium Thunder X ARM</li>
-</ul></li>
-</ul>
-<p> </p>
-</center>
-</div>
-</div>
-<div class="fragment">
-<div class="row">
-<div class="col-xs-4">
-<ul>
-<li>large memory single allocation<br />
-(&gt;32GB in one pointer)</li>
-</ul>
-</div>
-<div class="col-xs-4">
-<ul>
-<li>peer-to-peer Multi-GPU, RDMA</li>
-</ul>
-</div>
-<div class="col-xs-4">
-<ul>
-<li>systems management API and tooling</li>
-</ul>
-</div>
-</div>
-</div>
-</section><section id="rocr-runtime" class="slide level2">
-<h1>ROCr runtime</h1>
-<div class="row-fluid">
-<div class="col-xs-4">
-<center>
-<a href="http://www.hsafoundation.com/"><img src="img/hsa_logo_x400.jpg" /></a>
-</center>
-</div>
-<div class="col-xs-8">
-</div>
-<ul>
-<li>AMD's implementation of HSA runtime<br />
-(+ extensions for multi-GPU)</li>
-<li>user mode queues</li>
-<li>flat memory addressing</li>
-<li>atomic memory transactions &amp; signals</li>
-<li>process concurrency &amp; preemption</li>
-<li>device discovery</li>
-</ul>
-</div>
-</section><section id="heterogenous-compute-compiler" class="slide level2">
-<h1>Heterogenous Compute Compiler</h1>
-<div class="row">
-<div class="col-xs-4">
-<center>
-<a href="http://www.hsafoundation.com/"><img src="img/llvm-dragon_x400.png" /></a>
-</center>
-</div>
-<div class="col-xs-8">
-<ul>
-<li><p><a href="https://github.com/RadeonOpenCompute/hcc">hcc</a> compiler for supported APIs:</p>
-<ul>
-<li>OpenMP (OpenMP4 accelerator offloading in development)</li>
-<li>HIP &amp; HC</li>
-<li>OpenCL</li>
-</ul></li>
-<li>LLVM native GCN ISA code generation</li>
-<li>offline compilation support</li>
-<li>standardized loader and code object format</li>
-<li><p>GCN ISA assembler and disassembler</p></li>
-</ul>
-</div>
-</div>
-</section><section id="prologue" class="slide level2">
-<h1>Prologue</h1>
-<center>
-<figure>
-<img src="img/github_gpu_stream.png" alt="UoB-HPC/GPU-STREAM" style="width:90.0%" /><figcaption><a href="https://github.com/UoB-HPC/GPU-STREAM">UoB-HPC/GPU-STREAM</a></figcaption>
-</figure>
-</center>
-</section><section id="uob-hpcgpu-stream" class="slide level2">
-<h1><a href="https://github.com/UoB-HPC/GPU-STREAM">UoB-HPC/GPU-STREAM</a></h1>
-<pre><code>/* copy  */ c[:]    = a[:]
-/* mul   */ b[:]    = scalar*b[:]
-/* add   */ c[:]    = a[:] + b[:]
-/* triad */ a[:]    = b[:] + scalar*c[:] 
-/* dot   */ scalar  = dot(a[:],b[:])</code></pre>
-<p> </p>
-<center>
-<ul>
-<li>benchmark of various programming paradigms:<br />
-OpenMP3, OpenMP4, CUDA, Kokkos, Raja, OpenCL, ...</li>
-<li>for now *nix only</li>
-</ul>
-</center>
-</section></section>
-<section><section id="porting-code-from-cuda" class="titleslide slide level1"><h1>Porting Code from CUDA</h1></section><section id="hipify" class="slide level2">
-<h1>Hipify</h1>
-<div  class="row">
-<div class="col-xs-4">
-<center>
-<figure>
-<img src="fig/hipify-pipeline.svg" style="width:50.0%" />
-</figure>
-</center>
-</div>
-<div class="col-xs-8">
-<ul>
-<li>Convert CUDA to portable C++, <code>hipify</code></li>
-<li>C++ kernel language ( C++11/14/17 features )</li>
-<li>C runtime API</li>
-<li>same performance as native CUDA</li>
-</ul>
-<div class="fragment">
-<p> </p>
-<ul>
-<li><p>supports <em>most commonly</em> used parts of CUDA:<br />
-streams, events, memory (de-)allocation, profiling</p></li>
-<li>produced apps have full tool support:
-<ul>
-<li>CUDA: nvcc, nvprof, nvvp</li>
-<li>ROCM: hcc, rocm-prof, codexl</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-</section><section id="cuda-example" class="slide level2">
-<h1><a href="https://github.com/UoB-HPC/GPU-STREAM/blob/master/CUDAStream.cu#L149">CUDA Example</a></h1>
-<pre><code>__global__ void add_kernel(const T * a, 
-                           const T * b, 
-                           T * c){
-  const int i = blockDim.x * blockIdx.x + threadIdx.x;
-  c[i] = a[i] + b[i];}
-
-void CUDAStream&lt;T&gt;::add(){
-  add_kernel&lt;&lt;&lt;array_size/TBSIZE, TBSIZE&gt;&gt;&gt;(d_a, d_b, d_c);
-  check_error();  //..
-  }</code></pre>
-</section><section id="hipified-example" class="slide level2">
-<h1><a href="https://github.com/UoB-HPC/GPU-STREAM/blob/master/HIPStream.cpp#L152">Hip`ified Example</a></h1>
-<pre><code>__global__ void add_kernel(hipLaunchParm lp, 
-                           const T * a, const T * b, 
-                           T * c){
-  const int i = hipBlockDim_x * hipBlockIdx_x + hipThreadIdx_x;
-  c[i] = a[i] + b[i];
-}
-
-void HIPStream&lt;T&gt;::add(){
-  hipLaunchKernel(HIP_KERNEL_NAME(add_kernel), 
-                  dim3(array_size/TBSIZE), dim3(TBSIZE), 0, 0, 
-                  d_a, d_b, d_c);  check_error();  //...
-}</code></pre>
-</section><section id="hip-summary" class="slide level2">
-<h1>HIP summary</h1>
-<ul>
-<li><p>very interesting tool to get started with production or legacy code</p></li>
-<li><p>still low-level CUDA programming</p></li>
-<li><p>HIP library eco-system available: <a href="https://bitbucket.org/multicoreware/hcblas">hipBlas</a>, <a href="https://bitbucket.org/multicoreware/hcFFT">hipFFT</a>, <a href="https://bitbucket.org/multicoreware/hcrng">hipRNG</a>, machine learning acceleration, ...</p></li>
-</ul>
-</section></section>
-<section><section id="heterogenous-compute" class="titleslide slide level1"><h1>Heterogenous Compute</h1></section><section id="hc" class="slide level2">
-<h1>HC</h1>
-<ul>
-<li>C++ parallel runtime and <a href="https://scchan.github.io/hcc/index.html">API</a></li>
-<li>based on C++AMP in <code>hc</code> namespace plus C++14</li>
-<li>(asynchronous) copy commands for host-device i/o</li>
-<li>explicit pointer-based memory allocation (am_alloc / am_free)</li>
-<li>hc::accelerator_view, hc::array_view, hc::completion_future</li>
-<li>device specific 'instrinsics' (wavefront shuffle, bit extraction, atomics)</li>
-</ul>
-<center>
-<p> </p>
-<strong>Very similar to <a href="http://thrust.github.io/">thrust</a>, <a href="https://github.com/boostorg/com">boost.compute</a>, <a href="https://www.khronos.org/sycl">sycl</a>.</strong>
-</center>
-</section><section id="hc-api-overview" class="slide level2">
-<h1>HC API Overview</h1>
-<center>
-<img src="fig/hc_api_nutshell.svg" style="width:80.0%" />
-</center>
-</section><section id="hc-in-gpu-stream-declaration" class="slide level2">
-<h1>HC in <a href="https://github.com/UoB-HPC/GPU-STREAM">GPU-STREAM</a>, Declaration</h1>
-<pre><code>#include &quot;Stream.h&quot;
-#include &quot;hc.hpp&quot;
-
-template &lt;class T&gt;
-class HCStream : public Stream&lt;T&gt;
-{
-protected:
-  unsigned int array_size;
-  hc::array&lt;T,1&gt; d_a;
-  hc::array&lt;T,1&gt; d_b;
-  hc::array&lt;T,1&gt; d_c;
-  //...</code></pre>
-</section><section id="hc-in-gpu-stream-init-data" class="slide level2">
-<h1>HC in <a href="https://github.com/UoB-HPC/GPU-STREAM">GPU-STREAM</a>, Init Data</h1>
-<pre><code>template &lt;class T&gt;
-void HCStream&lt;T&gt;::init_arrays(T _a, T _b, T _c)
-{
-    hc::array_view&lt;T,1&gt; view_a(this-&gt;d_a);
-    hc::parallel_for_each(hc::extent&lt;1&gt;(array_size)
-                                , [=](hc::index&lt;1&gt; i) [[hc]] {
-                                  view_a[i] = _a;
-                                });
-    //...</code></pre>
-</section><section id="hc-in-gpu-stream-run-kernel" class="slide level2">
-<h1>HC in <a href="https://github.com/UoB-HPC/GPU-STREAM">GPU-STREAM</a>, Run Kernel</h1>
-<pre><code>template &lt;class T&gt;
-void HCStream&lt;T&gt;::add()
-{
-    hc::array_view&lt;T,1&gt; view_a(this-&gt;d_a);
-    hc::array_view&lt;T,1&gt; view_b(this-&gt;d_b);
-    hc::array_view&lt;T,1&gt; view_c(this-&gt;d_c);
-
-    hc::parallel_for_each(hc::extent&lt;1&gt;(array_size)
-                                , [=](hc::index&lt;1&gt; i) [[hc]] {
-                                  view_c[i] = view_a[i]+view_b[i];
-                                });</code></pre>
-</section><section id="lets-compare-the-results" class="slide level2">
-<h1>Let's compare the results</h1>
-<center>
-<img src="data/gpu_stream_lim_add.svg" style="width:80.0%" />
-</center>
-</section><section id="comparing-to-hbm2-and-gddr5x" class="slide level2">
-<h1>Comparing to HBM2 and GDDR5X</h1>
-<center>
-<img src="data/gpu_stream_lim_add_with_nvidia.svg" style="width:90.0%" />
-</center>
-</section><section id="hc-can-be-low-level-too-wip" class="slide level2">
-<h1>HC can be low-level too (<a href="https://github.com/psteinb/GPU-STREAM/blob/rocm_hc_support/HCStream.cpp">WIP</a>)</h1>
-<pre><code>hc::parallel_for_each(tiled_ex,
-                      [=,
-                      &amp;view_a,
-                      &amp;view_b,
-                      &amp;partial](const hc::tiled_index&lt;1&gt;&amp; tidx) [[hc]] {
-
-    auto gidx = tidx.global[0];
-    T r = T{0}; // Assumes reduction op is addition.
-    while (gidx &lt; view_a.get_extent().size()) {
-        r += view_a[gidx] * view_b[gidx]; //dot-product
-        gidx += domain_sz;
-    }
-
-    tile_static T tileData[TBSIZE];
-    tileData[tidx.local[0]] = r;
-
-    tidx.barrier.wait_with_tile_static_memory_fence();
-
-    for (auto h = TBSIZE / 2; h; h /= 2) {
-        if (tidx.local[0] &lt; h) {
-            tileData[tidx.local[0]] += tileData[tidx.local[0] + h];
-        }
-        tidx.barrier.wait_with_tile_static_memory_fence();
-    }
-
-    if (tidx.global == tidx.tile_origin) partial[tidx.tile] = tileData[0];</code></pre>
-</section><section id="concurrency-constructs" class="slide level2">
-<h1>Concurrency constructs</h1>
-<ul>
-<li>asynchronous operations (memory copies, kernel launches) return completion future</li>
-</ul>
-<pre><code>std::vector&lt;float&gt; payload  (/*pick a number*/);
-hc::array&lt;float,1&gt; d_payload(payload.size());
-hc::completion_future when_done = hc::async_copy(payload.begin(),
-    payload.end(),
-    d_payload);
-when_done.then(call_kernel_functor); //continuation function!</code></pre>
-<div class="fragment">
-<ul>
-<li>for me hc::completion_future::then API not production ready yet:</li>
-</ul>
-<pre><code>template&lt;typename functor &gt;
-void    then (const functor &amp;func);//just a callback for now</code></pre>
-</div>
-</section><section id="concurrency-ts" class="slide level2">
-<h1>Concurrency TS?</h1>
-<pre><code>std::vector&lt;hc::completion_future&gt; streams(n);
-for(hc::completion_future when_done : streams){
-
-    when_done = hc::async_copy(payload_begin_itr,
-                               payload_end_itr,
-                               d_payload_view);
-    when_done.then(parallel_for_each(/*do magic*/))
-             .then(hc::async_copy(d_payload_view,result_begin_itr));
-}
-
-hc::when_all(streams);</code></pre>
-<center>
-<p>concurrency constructs are the glue code of host-device interactions!</p>
-(see <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4399.html#futures.when_all">when_all</a>, <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0057r3.pdf">co_await</a> and friends)
-</center>
-</section></section>
-<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="what-i-learned-so-far" class="slide level2">
-<h1>What I learned so far</h1>
-<ul>
-<li>AMD's ROCm/ROCr stack is a very young and ambitious project</li>
-<li>full open-source driver, runtime and compiler for dGPU</li>
-<li><code>hc</code> API is expressive and reduces boiler-plate code (plans for C++17 on device)</li>
-<li>tooling and documentation are not there yet for production (HPC) codes</li>
-</ul>
-<p> </p>
-<center>
-<strong>Still an interesting approach to keep an eye on!</strong>
-</center>
-</section><section id="what-i-observe" class="slide level2">
-<h1>What I observe</h1>
-<ul>
-<li>CUDA/OpenCL as the community's working horse are low-level and enforce a lot of boiler plate</li>
-<li><a href="http://thrust.github.io/">thrust</a>, <a href="https://github.com/boostorg/com">boost.compute</a>, <a href="https://www.khronos.org/sycl">sycl</a>, <a href="https://scchan.github.io/hcc/index.html">hc</a> encapsulate this<br />
-(sometimes at the expense of feature parity)</li>
-<li><a href="https://herbsutter.com/2017/03/24/trip-report-winter-iso-c-standards-meeting-kona-c17-is-complete/">C++17 parallelism extensions</a> and C++20 concurrency good for multi-core, why not for dGPUs?</li>
-</ul>
-</section><section id="my-hopes-and-acks" class="slide level2">
-<h1>My Hopes and Acks</h1>
-<center>
-<img src="fig/future_dgpu_api.svg" style="width:80.0%" />
-</center>
-<div class="fragment">
-<center>
-<strong>Thank you for your attention!</strong>
-</center>
-<center>
-(Thanks to <script type="text/javascript">
-<!--
-h='&#x61;&#x6d;&#100;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#98;&#x65;&#110;&#46;&#x73;&#x61;&#110;&#100;&#x65;&#114;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#66;&#x65;&#110;&#32;&#x53;&#x61;&#110;&#100;&#x65;&#114;'+'<\/'+'a'+'>');
-// -->
-</script><noscript>&#66;&#x65;&#110;&#32;&#x53;&#x61;&#110;&#100;&#x65;&#114;&#32;&#40;&#98;&#x65;&#110;&#46;&#x73;&#x61;&#110;&#100;&#x65;&#114;&#32;&#x61;&#116;&#32;&#x61;&#x6d;&#100;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;&#x29;</noscript> and <script type="text/javascript">
-<!--
-h='&#x61;&#x6d;&#100;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x41;&#108;&#x65;&#120;&#x61;&#110;&#100;&#114;&#x75;&#46;&#86;&#x6f;&#x69;&#x63;&#x75;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x41;&#108;&#x65;&#120;&#32;&#86;&#x6f;&#x69;&#x63;&#x75;'+'<\/'+'a'+'>');
-// -->
-</script><noscript>&#x41;&#108;&#x65;&#120;&#32;&#86;&#x6f;&#x69;&#x63;&#x75;&#32;&#40;&#x41;&#108;&#x65;&#120;&#x61;&#110;&#100;&#114;&#x75;&#46;&#86;&#x6f;&#x69;&#x63;&#x75;&#32;&#x61;&#116;&#32;&#x61;&#x6d;&#100;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;&#x29;</noscript> for their valuable feedback!)
 </center>
 </div>
 </section></section>

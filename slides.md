@@ -44,7 +44,7 @@ My name is Jeffrey, but the author of these slides is Peter Steinbach!
 <center>
 ![](img/opensource-550x475.png)  
 
-**[github.com/psteinb/parallel2017](https://github.com/psteinb/parallel2017)**
+**[github.com/psteinb/parallel2017](https://github.com/psteinb/gtc2017)**
 </center>
 
 

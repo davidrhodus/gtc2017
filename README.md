@@ -1,10 +1,10 @@
-# parallel2017
+# gtc2017
 
-This is my repository for slides and code examples for my Parallel2017 talk, Mar 30th 2017, in Heidelberg (Germany).
+This is my repository for slides and code examples for my GTC2017 talk, May 11th 2017, in Silicon Valley (CA, USA).
 
 # Slides
 
-The slides can be viewed under [this URL](https://scionics.de) or locally by opening index.html with a browser of your choice (chrome/chromium and firefox give the best results).
+The slides can be viewed under [this URL](psteinb.github.io/gtc2017) or locally by opening index.html with a browser of your choice (chrome/chromium and firefox give the best results).
 
 # Dependencies
 
