@@ -2,6 +2,19 @@
 
 ## building the software stack
 
+### OS
+
+For all benchmarks, I used parts of our HPC infrastructure running under:
+
+```
+$ lsb_release -a
+LSB Version:    :core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch
+Distributor ID: CentOS
+Description:    CentOS Linux release 7.2.1511 (Core) 
+Release:        7.2.1511
+Codename:       Core
+```
+
 ### x264
 
 - commit `90a61ec76424778c050524f682a33f115024be96` from [here](http://www.videolan.org/developers/x264.html) compiled with [gcc/6.2.0](ftp://ftp.gwdg.de/pub/misc/gcc/releases/gcc-6.2.0/) from the official mirror sites
