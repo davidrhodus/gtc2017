@@ -203,10 +203,11 @@ Movie does not work! Sorry!
 <li>heart of sqeazy: pipeline mechanism
 <ul>
 <li>transform data so that it can be compressed best</li>
-<li>use very good and fast encoders end the pipeline, e.g. <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/lz4/lz4">lz4</a>, <a href="http://www.blosc.org/">blosc</a>, ...<br />
+<li>use very good and fast encoders as end of the pipeline, e.g. <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/lz4/lz4">lz4</a>, <a href="http://www.blosc.org/">blosc</a>, ...<br />
 <em>use them, don't reinvent them!</em></li>
 </ul></li>
-<li>do it fast! (multi-core, SIMD)</li>
+<li><p>do it fast! (multi-core, SIMD)</p></li>
+<li><p>written in C++11 (soon C++14)</p></li>
 </ul>
 </div>
 </div>
@@ -227,7 +228,7 @@ Movie does not work! Sorry!
 <div class="col-xs-4">
 <ul>
 <li>multimedia industry and video codec research has worked in high-bandwidth/low-latency regime for years</li>
-<li>reuse their expertise through royalty free codecs</li>
+<li>reuse their expertise through free available codec libraries</li>
 <li>currently looking into <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">h264/MPEG-4 AVC</a> and <a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding">h265/hevc</a>, others are possible</li>
 </ul>
 </div>
@@ -263,13 +264,25 @@ mean +/- std = 11 +/- 3</li>
 </center>
 </section><section id="ffmpeg" class="slide level2">
 <h1>ffmpeg</h1>
+<div class="row vertical-align">
+<div class="col-xs-8">
 <ul>
-<li><p>using ffmpeg framework to interface sqeazy to</p></li>
+<li><p>using <a href="https://ffmpeg.org/">ffmpeg</a> framework to interface sqeazy to</p>
+<ul>
 <li><p>support CPU and GPU based encoding/decoding</p></li>
 <li><p>enable future directions to non-x86 platforms</p></li>
+<li><p>Linux, macOS, Windows supported</p></li>
+</ul></li>
 <li><p>steep learning curve for using libavcodec API</p></li>
-<li><p>currently using ffmpeg 3.0.7</p></li>
+<li><p>currently: ffmpeg 3.0.7</p></li>
 </ul>
+</div>
+<div class="col-xs-4">
+<figure>
+<img src="img/ffmpeg-logo.png" style="width:80.0%" />
+</figure>
+</div>
+</div>
 </section><section id="hardware-accelerated-ffmpeg" class="slide level2">
 <h1>hardware accelerated ffmpeg</h1>
 <p>show OS support table, and why nvenc is a valid choice</p>
@@ -278,16 +291,28 @@ mean +/- std = 11 +/- 3</li>
 <h1>benchmark platform</h1>
 <div class="row">
 <div class="col-xs-6">
-<center>
-<em>hardware</em>
-</center>
+<div style="font-size: 1.5em; text-align: center">
+<p><em>hardware</em></p>
+</div>
 <ul>
-<li>dual socket Intel E5-2650v3</li>
+<li>dual socket Intel Xeon <a href="http://www.cpu-world.com/CPUs/Xeon/Intel-Xeon%20E5-2680%20v3.html">E5-2680v3</a> (2x12c)</li>
 <li>128GB DDR4 RAM</li>
-<li></li>
+<li>2x <a href="https://en.wikipedia.org/wiki/GeForce_10_series">Nvidia GeForce GTX1080</a></li>
+<li>CentOS 7.1</li>
 </ul>
 </div>
 <div class="col-xs-6">
+<div style="font-size: 1.5em; text-align: center">
+<p><em>software</em></p>
+</div>
+<ul>
+<li><a href="https://ffmpeg.org/">ffmpeg</a> 3.0.7</li>
+<li><a href="http://git.videolan.org/git/x264.git">x264</a> (commit 90a61ec764)</li>
+<li><a href="https://bitbucket.org/multicoreware/x265/wiki/Home">x265</a> 2.4</li>
+<li><a href="https://gcc.gnu.org/">GNU gcc</a> 6.3</li>
+<li><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Media SDK</a> v7.1</li>
+<li>Nvidia driver 375.26</li>
+</ul>
 </div>
 </div>
 </section><section id="ultrafast-baseline-h264" class="slide level2">

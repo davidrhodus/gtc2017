@@ -232,11 +232,13 @@ date: May 11, 2017
 
 - heart of sqeazy: pipeline mechanism
     - transform data so that it can be compressed best
-    - use very good and fast encoders end the pipeline, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
+    - use very good and fast encoders as end of the pipeline, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
     *use them, don't reinvent them!*
 
 
 - do it fast! (multi-core, SIMD)
+
+- written in C++11 (soon C++14)
 
 [/column]
 
@@ -268,7 +270,7 @@ date: May 11, 2017
 [column,class="col-xs-4"]
 
 - multimedia industry and video codec research has worked in high-bandwidth/low-latency regime for years
-- reuse their expertise through royalty free codecs
+- reuse their expertise through free available codec libraries
 - currently looking into [h264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC) and [h265/hevc](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding), others are possible
 
 [/column]
@@ -316,16 +318,31 @@ WIP: illustrate lossyness by plot to have basis for comparison later
 
 ## ffmpeg
 
-- using ffmpeg framework to interface sqeazy to
+[columns,class="row vertical-align"]
 
-- support CPU and GPU based encoding/decoding
+[column,class="col-xs-8"]
 
-- enable future directions to non-x86 platforms 
+- using [ffmpeg](https://ffmpeg.org/) framework to interface sqeazy to
+
+    - support CPU and GPU based encoding/decoding
+
+    - enable future directions to non-x86 platforms 
+    
+    - Linux, macOS, Windows supported
 
 - steep learning curve for using libavcodec API
 
-- currently using ffmpeg 3.0.7
+- currently: ffmpeg 3.0.7
 
+[/column]
+
+[column,class="col-xs-4"]
+
+![](img/ffmpeg-logo.png){ width=80% }
+
+[/column]
+
+[/columns]
 
 ## hardware accelerated ffmpeg
 
@@ -339,19 +356,31 @@ show OS support table, and why nvenc is a valid choice
 
 [column,class="col-xs-6"]
 
-<center>
+<div style="font-size: 1.5em; text-align: center">
 *hardware*
-</center>
+</div>
 
-- dual socket Intel E5-2650v3
+- dual socket Intel Xeon [E5-2680v3](http://www.cpu-world.com/CPUs/Xeon/Intel-Xeon%20E5-2680%20v3.html) (2x12c)
 - 128GB DDR4 RAM
-- 
+- 2x [Nvidia GeForce GTX1080](https://en.wikipedia.org/wiki/GeForce_10_series)
+- CentOS 7.1
 
 [/column]
 
 
 [column,class="col-xs-6"]
 
+<div style="font-size: 1.5em; text-align: center">
+*software*
+</div>
+
+- [ffmpeg](https://ffmpeg.org/) 3.0.7
+- [x264]( http://git.videolan.org/git/x264.git ) (commit 90a61ec764)
+- [x265]( https://bitbucket.org/multicoreware/x265/wiki/Home ) 2.4
+- [GNU gcc](https://gcc.gnu.org/) 6.3
+- [Nvidia Media SDK](https://developer.nvidia.com/nvidia-video-codec-sdk) v7.1
+- Nvidia driver 375.26
+- [snakemake](https://snakemake.readthedocs.io/en/stable/) 3.11.2 to orchestrate benchmarks
 
 [/column]
 
