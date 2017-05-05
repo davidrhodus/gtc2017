@@ -185,7 +185,7 @@ date: May 11, 2017
 
 </center>
 
-## <span style="color:black">Does that scale?</span> {data-background="ieee_data_deluge.jpg"}
+## <span style="color:black">Does that scale?</span> {data-background="img/ieee_data_deluge.jpg"}
 
 
 # [Sqeazy](https://github.com/sqeazy/sqeazy)
