@@ -145,7 +145,9 @@ date: May 11, 2017
 [column,class="col-xs-6"]
 
 <center>
-![](img/xscope_schematic.png){width=100%}  
+
+![Design Draft of a modern SPIM microscope, credits Nicola Maghelli (MPI CBG, Myers lab)](img/xscope_schematic.png){width=100%}  
+
 </center>
 
 [/column]
@@ -160,9 +162,13 @@ date: May 11, 2017
 	+ each CMOS camera can record 850 MB/s of 16bit grayscale 
 	+ 2 cameras per scope, 1.7 GB/s
 
-- scientists would like to capture long timelapses *1-2 days*
+- scientists would like to capture long timelapses *1-2 days* (or more)
 
-- total data volume: *150-300 TiB*
+- total data volume per 1-2 day capture:  
+
+*150-300 TiB* raw volume
+
+= *57 - 114 kEUR* in SSDs
 
 </center>
 
@@ -171,6 +177,180 @@ date: May 11, 2017
 [/columns]
 
 
-## IT infrastructure to the rescue
+## IT to the rescue
+
+<center>
+
+![](fig/spim_dataflow_and_infrastructure.svg){ width=85% }  
+
+</center>
+
+## <span style="color:black">Does that scale?</span> {data-background="ieee_data_deluge.jpg"}
 
 
+# [Sqeazy](https://github.com/sqeazy/sqeazy)
+
+## [Open-source Compression Library](https://github.com/sqeazy/sqeazy){ target="_blank" }
+
+<center>
+
+<a href="https://github.com/sqeazy/sqeazy" target="_blank">
+![](img/sqeazy-on-github.png){ width=90% }
+</a>
+
+</center>
+
+## Yet another compression library?
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-6"]
+
+<center>
+
+![[wikimedia commons](https://commons.wikimedia.org/wiki/File:Paris_Tuileries_Garden_Facepalm_statue.jpg)](img/800px-Paris_Tuileries_Garden_Facepalm_statue.jpg)
+
+</center>
+
+[/column]
+
+
+[column,class="col-xs-6"]
+
+- heart of sqeazy: pipeline mechanism
+- very good and fast encoders are out there, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
+*use them, don't reinvent them!*
+
+- tranform data so that it can be compressed best
+- do it fast!
+
+[/column]
+
+[/columns]
+
+## Can we do better?
+
+<center>
+
+3D in space = 2D in space + time!
+
+</center>
+
+. . .  
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![[wikimedia commons](https://commons.wikimedia.org/wiki/File:Resolution_of_SD,_Full_HD,_4K_Ultra_HD_%26_8K_Ultra_HD.svg)](img/800px-Resolution_of_SD,_Full_HD,_4K_Ultra_HD_&_8K_Ultra_HD.svg.png){ width=80% }
+
+</center>
+
+[/column]
+
+
+[column,class="col-xs-4"]
+
+- multimedia industry and video codec research has worked in high-bandwidth/low-latency regime for years
+- reuse their expertise through royalty free codecs
+- currently looking into [h264/MPEG-4 AVC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC) and [h265/hevc](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding), others are possible
+
+[/column]
+
+[/columns]
+
+
+## Challenge: SPIM data
+
+<center>
+
+![](plots/corpus_drange.svg){width=90%}  
+
+</center>
+
+[columns,class="row"]
+
+[column,class="col-xs-6"]
+
+- raw data is encoded as _grey16_
+
+[/column]
+
+
+[column,class="col-xs-6"]
+
+- pixel intensities occupy more than 8-bits  
+mean +/- std = 11 +/- 3
+
+[/column]
+
+[/columns]
+
+
+## Solution: Quantize data
+
+- apply lossy bucket based transformation from 16 to 8 bits
+
+<center>
+
+WIP: illustrate lossyness by plot to have basis for comparison later
+
+</center>
+
+
+## ffmpeg
+
+- using ffmpeg framework to interface sqeazy to
+
+- support CPU and GPU based encoding/decoding
+
+- enable future directions to non-x86 platforms 
+
+- steep learning curve for using libavcodec API
+
+- currently using ffmpeg 3.0.7
+
+
+## hardware accelerated ffmpeg
+
+show OS support table, and why nvenc is a valid choice
+
+# Results
+
+## benchmark platform
+
+[columns,class="row"]
+
+[column,class="col-xs-6"]
+
+<center>
+*hardware*
+</center>
+
+- dual socket Intel E5-2650v3
+- 128GB DDR4 RAM
+- 
+
+[/column]
+
+
+[column,class="col-xs-6"]
+
+
+[/column]
+
+[/columns]
+
+
+## Ultrafast Baseline h264
+
+## Ultrafast Baseline h265
+
+## Ultrafast Baseline h264 on GPU
+
+## Ultrafast Baseline h265 on GPU
+
+
+# Summary

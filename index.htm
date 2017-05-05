@@ -145,7 +145,9 @@ Movie does not work! Sorry!
 <div class="row vertical-align">
 <div class="col-xs-6">
 <center>
-<img src="img/xscope_schematic.png" style="width:100.0%" />
+<figure>
+<img src="img/xscope_schematic.png" alt="Design Draft of a modern SPIM microscope, credits Nicola Maghelli (MPI CBG, Myers lab)" style="width:100.0%" /><figcaption>Design Draft of a modern SPIM microscope, credits Nicola Maghelli (MPI CBG, Myers lab)</figcaption>
+</figure>
 </center>
 </div>
 <div class="col-xs-6">
@@ -156,13 +158,125 @@ Movie does not work! Sorry!
 <li>each CMOS camera can record 850 MB/s of 16bit grayscale</li>
 <li>2 cameras per scope, 1.7 GB/s</li>
 </ul></li>
-<li><p>scientists would like to capture long timelapses <em>1-2 days</em></p></li>
-<li><p>total data volume: <em>150-300 TiB</em></p></li>
+<li><p>scientists would like to capture long timelapses <em>1-2 days</em> (or more)</p></li>
+<li><p>total data volume per 1-2 day capture:</p></li>
 </ul>
+<p><em>150-300 TiB</em> raw volume</p>
+<p>= <em>57 - 114 kEUR</em> in SSDs</p>
 </center>
 </div>
 </div>
+</section><section id="it-to-the-rescue" class="slide level2">
+<h1>IT to the rescue</h1>
+<center>
+<figure>
+<img src="fig/spim_dataflow_and_infrastructure.svg" style="width:85.0%" />
+</figure>
+</center>
+</section><section id="does-that-scale" class="slide level2" data-background="ieee_data_deluge.jpg">
+<h1><span style="color:black">Does that scale?</span></h1>
 </section></section>
+<section><section id="sqeazy" class="titleslide slide level1"><h1><a href="https://github.com/sqeazy/sqeazy">Sqeazy</a></h1></section><section id="open-source-compression-library" class="slide level2">
+<h1><a href="https://github.com/sqeazy/sqeazy" target="_blank">Open-source Compression Library</a></h1>
+<center>
+<p><a href="https://github.com/sqeazy/sqeazy" target="_blank"> <img src="img/sqeazy-on-github.png" style="width:90.0%" /> </a></p>
+</center>
+</section><section id="yet-another-compression-library" class="slide level2">
+<h1>Yet another compression library?</h1>
+<div class="row vertical-align">
+<div class="col-xs-6">
+<center>
+<figure>
+<img src="img/800px-Paris_Tuileries_Garden_Facepalm_statue.jpg" alt="wikimedia commons" /><figcaption><a href="https://commons.wikimedia.org/wiki/File:Paris_Tuileries_Garden_Facepalm_statue.jpg">wikimedia commons</a></figcaption>
+</figure>
+</center>
+</div>
+<div class="col-xs-6">
+<ul>
+<li>heart of sqeazy: pipeline mechanism</li>
+<li><p>very good and fast encoders are out there, e.g. <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/lz4/lz4">lz4</a>, <a href="http://www.blosc.org/">blosc</a>, ...<br />
+<em>use them, don't reinvent them!</em></p></li>
+<li>tranform data so that it can be compressed best</li>
+<li><p>do it fast!</p></li>
+</ul>
+</div>
+</div>
+</section><section id="can-we-do-better" class="slide level2">
+<h1>Can we do better?</h1>
+<center>
+<p>3D in space = 2D in space + time!</p>
+</center>
+<div class="fragment">
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="img/800px-Resolution_of_SD,_Full_HD,_4K_Ultra_HD_&amp;_8K_Ultra_HD.svg.png" alt="wikimedia commons" style="width:80.0%" /><figcaption><a href="https://commons.wikimedia.org/wiki/File:Resolution_of_SD,_Full_HD,_4K_Ultra_HD_%26_8K_Ultra_HD.svg">wikimedia commons</a></figcaption>
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li>multimedia industry and video codec research has worked in high-bandwidth/low-latency regime for years</li>
+<li>reuse their expertise through royalty free codecs</li>
+<li>currently looking into <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC">h264/MPEG-4 AVC</a> and <a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding">h265/hevc</a>, others are possible</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section id="challenge-spim-data" class="slide level2">
+<h1>Challenge: SPIM data</h1>
+<center>
+<figure>
+<img src="plots/corpus_drange.svg" style="width:90.0%" />
+</figure>
+</center>
+<div class="row">
+<div class="col-xs-6">
+<ul>
+<li>raw data is encoded as <em>grey16</em></li>
+</ul>
+</div>
+<div class="col-xs-6">
+<ul>
+<li>pixel intensities occupy more than 8-bits<br />
+mean +/- std = 11 +/- 3</li>
+</ul>
+</div>
+</div>
+</section><section id="solution-quantize-data" class="slide level2">
+<h1>Solution: Quantize data</h1>
+<ul>
+<li>apply lossy bucket based transformation from 16 to 8 bits</li>
+</ul>
+<center>
+<p>illustrate lossyness by plot to have basis for comparison later</p>
+</center>
+</section><section id="ffmpeg" class="slide level2">
+<h1>ffmpeg</h1>
+<ul>
+<li><p>using ffmpeg framework to interface sqeazy to</p></li>
+<li><p>support CPU and GPU based encoding/decoding</p></li>
+<li><p>enable future directions to non-x86 platforms</p></li>
+<li><p>steep learning curve for using libavcodec API</p></li>
+<li><p>currently using ffmpeg 3.0.7</p></li>
+</ul>
+</section><section id="hardware-accelerated-ffmpeg" class="slide level2">
+<h1>hardware accelerated ffmpeg</h1>
+<p>show OS support table, and why nvenc is a valid choice</p>
+</section></section>
+<section><section id="results" class="titleslide slide level1"><h1>Results</h1></section><section id="platform-used" class="slide level2">
+<h1>platform used</h1>
+</section><section id="ultrafast-baseline-h264" class="slide level2">
+<h1>Ultrafast Baseline h264</h1>
+</section><section id="ultrafast-baseline-h265" class="slide level2">
+<h1>Ultrafast Baseline h265</h1>
+</section><section id="ultrafast-baseline-h264-1" class="slide level2">
+<h1>Ultrafast Baseline h264</h1>
+</section><section id="ultrafast-baseline-h265-1" class="slide level2">
+<h1>Ultrafast Baseline h265</h1>
+</section></section>
+<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section></section>
       </div>
     </div>
 
