@@ -15,5 +15,8 @@ drangeplot = drangeplot + xlab("corpus file name") + ylab(" dynamic range / numb
 drangeplot = drangeplot + coord_flip()
 drangeplot = drangeplot + ylim(0,16)
 
-ggsave("corpus_drange.png",drangeplot,height=3.5)
-ggsave("corpus_drange.svg",drangeplot,height=3.5)
+cat(paste("mean dynamic range: ",mean(corpus_df$drange),"median dynamic range: ",median(corpus_df$drange),"\n"))
+cat(paste("std dynamic range: ",sd(corpus_df$drange),"\n"))
+
+ggsave("corpus_drange.png",drangeplot,height=4,width=10)
+ggsave("corpus_drange.svg",drangeplot,height=4,width=10)
