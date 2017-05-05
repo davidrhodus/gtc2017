@@ -193,11 +193,13 @@ Movie does not work! Sorry!
 </div>
 <div class="col-xs-6">
 <ul>
-<li>heart of sqeazy: pipeline mechanism</li>
-<li><p>very good and fast encoders are out there, e.g. <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/lz4/lz4">lz4</a>, <a href="http://www.blosc.org/">blosc</a>, ...<br />
-<em>use them, don't reinvent them!</em></p></li>
-<li>tranform data so that it can be compressed best</li>
-<li><p>do it fast!</p></li>
+<li>heart of sqeazy: pipeline mechanism
+<ul>
+<li>transform data so that it can be compressed best</li>
+<li>use very good and fast encoders end the pipeline, e.g. <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/lz4/lz4">lz4</a>, <a href="http://www.blosc.org/">blosc</a>, ...<br />
+<em>use them, don't reinvent them!</em></li>
+</ul></li>
+<li>do it fast! (multi-core, SIMD)</li>
 </ul>
 </div>
 </div>

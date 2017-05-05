@@ -218,11 +218,12 @@ date: May 11, 2017
 [column,class="col-xs-6"]
 
 - heart of sqeazy: pipeline mechanism
-- very good and fast encoders are out there, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
-*use them, don't reinvent them!*
+    - transform data so that it can be compressed best
+    - use very good and fast encoders end the pipeline, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
+    *use them, don't reinvent them!*
 
-- transform data so that it can be compressed best
-- do it fast!
+
+- do it fast! (multi-core, SIMD)
 
 [/column]
 
