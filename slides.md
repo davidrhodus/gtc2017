@@ -221,7 +221,7 @@ date: May 11, 2017
 - very good and fast encoders are out there, e.g. [zstd](https://github.com/facebook/zstd), [lz4](https://github.com/lz4/lz4), [blosc](http://www.blosc.org/), ...  
 *use them, don't reinvent them!*
 
-- tranform data so that it can be compressed best
+- transform data so that it can be compressed best
 - do it fast!
 
 [/column]
