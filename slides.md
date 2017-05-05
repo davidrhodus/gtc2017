@@ -125,6 +125,10 @@ date: May 11, 2017
 
 ## Biologists love this!
 
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
 <center>
 
 <video width="1200" poster="movies/Drosophila_Embryogenesis_beads_removed.png" controls>
@@ -133,10 +137,19 @@ date: May 11, 2017
 <p>Movie does not work! Sorry!</p>
 </video>
 
-[3d rendering of Drosophila embryogenesis time-lapse reconstructed from 5 angles SPIM recording, credits to Pavel Tomancak (MPI CBG)](https://extweb-srv5.mpi-cbg.de/de/research/research-groups/pavel-tomancak/movies.html)
-
 </center>
 
+[/column]
+
+[column,class="col-xs-4"]
+
+3D rendering of Drosophila embryogenesis time-lapse data reconstructed from 5 angles SPIM recording  
+
+[credits to Pavel Tomancak (MPI CBG)](https://extweb-srv5.mpi-cbg.de/de/research/research-groups/pavel-tomancak/movies.html)
+
+[/column]
+
+[/columns]
 
 ## But ... 
 
