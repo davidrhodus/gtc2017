@@ -307,14 +307,30 @@ mean +/- std = 11 +/- 3
 
 ## Solution: Quantize data
 
-- apply lossy bucket based transformation from 16 to 8 bits
+
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
 
 <center>
 
-WIP: illustrate lossyness by plot to have basis for comparison later
+![](data/sqy/sqy_quantizer.svg){width=100%}
 
 </center>
 
+[/column]
+
+[column,class="col-xs-4"]
+
+- lossy bucket based quantisation (16 -> 8 bits per pixel)
+- quality loss minimal
+- bandwidth enough to take 4 cameras
+
+[/column]
+
+[/columns]
 
 ## ffmpeg
 

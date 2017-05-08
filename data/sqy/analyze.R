@@ -66,11 +66,11 @@ quantizer_plot = quantizer_plot + geom_point(size=4)
 quantizer_plot = quantizer_plot + ggtitle("sqeazy quantiser (8 threads of Intel E5-2680v3 CPU)")
 quantizer_plot = quantizer_plot + xlab("ingest bandwidth / MB/s") + ylab(" RMS / (max(I)-min(I)) ")
 quantizer_plot = quantizer_plot + geom_vline(xintercept=xinter, color="Red", size=2)
-quantizer_plot = quantizer_plot + geom_text(aes(x=xinter, label=sprintf("\nmedian(ingest)= %.0f",xinter), y=1.4e-3),
+quantizer_plot = quantizer_plot + geom_text(aes(x=xinter, label=sprintf("\nmedian = %.0f",xinter), y=1.4e-3),
                                             colour="red", angle=90, text=element_text(size=11))
 
 quantizer_plot = quantizer_plot + geom_hline(yintercept=yinter, color="Blue", size=2)
-quantizer_plot = quantizer_plot + geom_text(aes(y=yinter, label=sprintf("\nmedian(norm RMS)= %.4f",yinter), x=7.5e3),
+quantizer_plot = quantizer_plot + geom_text(aes(y=yinter, label=sprintf("\nmedian = %.4f",yinter), x=7.5e3),
                                             colour="blue", text=element_text(size=11))
 
 

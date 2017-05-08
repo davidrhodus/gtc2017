@@ -256,12 +256,22 @@ mean +/- std = 11 +/- 3</li>
 </div>
 </section><section id="solution-quantize-data" class="slide level2">
 <h1>Solution: Quantize data</h1>
-<ul>
-<li>apply lossy bucket based transformation from 16 to 8 bits</li>
-</ul>
+<div class="row vertical-align">
+<div class="col-xs-8">
 <center>
-<p>WIP: illustrate lossyness by plot to have basis for comparison later</p>
+<figure>
+<img src="data/sqy/sqy_quantizer.svg" style="width:100.0%" />
+</figure>
 </center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li>lossy bucket based quantisation (16 -&gt; 8 bits per pixel)</li>
+<li>quality loss minimal</li>
+<li>bandwidth enough to take 4 cameras</li>
+</ul>
+</div>
+</div>
 </section><section id="ffmpeg" class="slide level2">
 <h1>ffmpeg</h1>
 <div class="row vertical-align">
@@ -312,6 +322,7 @@ mean +/- std = 11 +/- 3</li>
 <li><a href="https://gcc.gnu.org/">GNU gcc</a> 6.3</li>
 <li><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Media SDK</a> v7.1</li>
 <li>Nvidia driver 375.26</li>
+<li><a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a> 3.11.2 to orchestrate benchmarks</li>
 </ul>
 </div>
 </div>
