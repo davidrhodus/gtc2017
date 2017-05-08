@@ -3,83 +3,78 @@ library(ggplot2)
 library(dplyr, warn.conflicts=FALSE)
 library(readr)
 library(ggthemes)
-
-df1 = read_csv("fiji_r9_nano_rocm1.4-ubuntu14.04.5-hip-gpustream.csv"      ,col_names=FALSE)
-df2 = read_csv("fiji_r9_nano_rocm1.4-ubuntu14.04.5-ocl-gpustream.csv"      ,col_names=FALSE)
-df3 = read_csv("fiji_r9_nano_rocm1.4-ubuntu14.04.5-old-hc-gpustream.csv"   ,col_names=FALSE)
+library(tidyr)
 
 
+add_colnames_for_enc = function(df){
+    colnames(df) = c("filename","sizeof_pixel","shape","n_elements","time_mus","final_bytes","id","comment")
 
-p100 = read_csv("p100_cuda8_ubuntu14.04.5.gpustream.csv", col_names=FALSE)
-gtx1080 = read_csv("gtx1080_cuda8_centos7.3.csv", col_names=FALSE)
-
-
-
-add_colnames = function(df){
-    colnames(df) = c("alg","bw_mb_per_sec","maxv","meanv","minv","sizeof","array_size","total_volume_gb","api")
-    df$sizeof = as.factor(df$sizeof)
-    df$alg = as.factor(df$alg)
-    levels(df$sizeof) = c("float","double")
+    df = df %>% separate(comment, into = c("pipeline", "threads","timestamp"), sep = "\\|")
+    df$threads = as.integer(gsub("threads","",df$threads))
+    df$filename = gsub("\\.tif","",df$filename)
+#    df$pipeline= as.factor(df$pipeline)
     return(df)
 }
 
-df1 = add_colnames(df1) 
-df2 = add_colnames(df2) 
-df3 = add_colnames(df3) 
-df3$api = "hc"
+add_colnames_for_dec = function(ddf){
+    colnames(ddf) = c("mode","filename","pipeline","realtime_s","user_s","sys_s","exit_code","threads","timestamp")
+    return(ddf)
+}
 
-df = df1 %>% bind_rows(df2) %>% bind_rows(df3)
-
-df$model = "AMD Fiji R9 Nano"
-
-p100 = add_colnames(p100)
-p100$model = "Nvidia Tesla P100"
-
-gtx1080 = add_colnames(gtx1080)
-gtx1080$model = "Nvidia GeForce GTX 1080"
-
-gtx1080$api = "CUDA"
-p100$api = "CUDA"
+add_colnames_for_qual = function(qdf){
+    colnames(qdf) = c("filename","pipeline","timestamp","bits_p_sample","left_drange","mse","nrmse","psnr","right_drange")
+    return(qdf)
+}
 
 
-df_with_cuda = df %>% bind_rows(p100) %>% bind_rows(gtx1080)
+enc_df = read_csv("sqy-corpus-encode.csv"      ,col_names=FALSE)
+enc_df = add_colnames_for_enc(enc_df)
+
+gr_enc_df = enc <- enc_df %>%
+    group_by(filename, sizeof_pixel,n_elements,final_bytes,pipeline,threads) %>%
+    summarize( mn_time_mus = mean(time_mus), md_time_mus = median(time_mus), sd_time_mus = sd(time_mus)) %>%
+    mutate( size_mb = n_elements*sizeof_pixel/(1024*1024), size_gb = size_mb/(1024),
+           md_ingest_bw_mb_per_sec = size_mb*10e6/(md_time_mus),
+           mn_ingest_bw_mb_per_sec = size_mb*10e6/(mn_time_mus),
+           sd_ingest_bw_mb_per_sec = size_mb*10e6/(sd_time_mus)
+           )
+
+dec_df = read_csv("sqy-corpus-decode.csv"      ,col_names=FALSE)
+dec_df = add_colnames_for_dec(dec_df)
 
 
-add_with_cuda = df_with_cuda %>% filter(alg == "Add") %>% filter(sizeof == "float")
-adddf = df %>% filter(alg == "Add") %>% filter(sizeof == "float")
-
-glimpse(adddf)
+qual_df = read_csv("sqy-corpus-quality.csv"      ,col_names=FALSE)
+qual_df = add_colnames_for_qual(qual_df)
 
 
-add_plot = ggplot( adddf ,aes(total_volume_gb ,bw_mb_per_sec/1024.,color=api)) + theme_bw()
-add_plot = add_plot + geom_line(size=2) #+ facet_wrap( ~ sizeof )
-add_plot = add_plot + ggtitle("GPU-Stream Add : AMD R9 Fiji Nano (rocm 1.4)")
-add_plot = add_plot + xlab("used device memory / GB") + ylab(" mean(Bandwidth) / GB/s")
-## add_plot = add_plot + scale_y_log10() 
-## add_plot = add_plot + scale_x_log10() 
-ggsave("gpu_stream_add.png",add_plot,height=3.5)
-ggsave("gpu_stream_add.svg",add_plot,height=3.5)
+combined_enc = inner_join(gr_enc_df,qual_df,by = c("filename"="filename",
+                                                   "pipeline"="pipeline"))
+
+glimpse(combined_enc)
+unique(combined_enc$pipeline)
+
+to_plot = combined_enc %>% filter("quantiser->lz4" %in% pipeline) %>% mutate( obfuscated_filename = paste("corpus-",row_number(),sep=""))
+
+glimpse(to_plot)
+paste(unique(to_plot$filename))
+
+xinter=median(to_plot$md_ingest_bw_mb_per_sec)
+yinter=median(to_plot$nrmse)
+
+quantizer_plot = ggplot( to_plot ,aes( x=md_ingest_bw_mb_per_sec,y=nrmse)) + theme_bw()
+quantizer_plot = quantizer_plot + geom_point(size=4) 
+quantizer_plot = quantizer_plot + ggtitle("sqeazy quantiser (8 threads of Intel E5-2680v3 CPU)")
+quantizer_plot = quantizer_plot + xlab("ingest bandwidth / MB/s") + ylab(" RMS / (max(I)-min(I)) ")
+quantizer_plot = quantizer_plot + geom_vline(xintercept=xinter, color="Red", size=2)
+quantizer_plot = quantizer_plot + geom_text(aes(x=xinter, label=sprintf("\nmedian(ingest)= %.0f",xinter), y=1.4e-3),
+                                            colour="red", angle=90, text=element_text(size=11))
+
+quantizer_plot = quantizer_plot + geom_hline(yintercept=yinter, color="Blue", size=2)
+quantizer_plot = quantizer_plot + geom_text(aes(y=yinter, label=sprintf("\nmedian(norm RMS)= %.4f",yinter), x=7.5e3),
+                                            colour="blue", text=element_text(size=11))
 
 
-lim_add_plot = ggplot( adddf ,aes(total_volume_gb ,bw_mb_per_sec/1024.,color=api)) #+ theme_bw()
-lim_add_plot = lim_add_plot + geom_line(size=2) #+ facet_wrap( ~ sizeof )
-lim_add_plot = lim_add_plot + ggtitle("GPU-Stream Add on AMD R9 Fiji Nano")
-lim_add_plot = lim_add_plot + xlab("used device memory / GB") + ylab(" mean(Bandwidth) / GB/s")
-lim_add_plot = lim_add_plot + xlim(0,2) + ylim(350,500) 
-lim_add_plot = lim_add_plot + theme_solarized_2(light = FALSE) +
-  scale_colour_solarized("blue")
+ggsave("sqy_quantizer.png",quantizer_plot,height=4)
+ggsave("sqy_quantizer.svg",quantizer_plot,height=4)
+ggsave("sqy_quantizer.pdf",quantizer_plot,height=4)
 
-ggsave("gpu_stream_lim_add.png",lim_add_plot,height=3.5)
-ggsave("gpu_stream_lim_add.svg",lim_add_plot,height=3.5)
-
-
-lim_add_wp100_plot = ggplot( add_with_cuda ,aes(total_volume_gb ,bw_mb_per_sec/1024.,color=api,linetype=model)) #+ theme_bw()
-lim_add_wp100_plot = lim_add_wp100_plot + geom_line(size=1.5) #+ facet_wrap( ~ sizeof )
-#lim_add_wp100_plot = lim_add_wp100_plot + ggtitle("GPU-Stream Add : c[:] = b[:] + a[:]")
-lim_add_wp100_plot = lim_add_wp100_plot + xlab("used device memory / GB") + ylab(" mean(Bandwidth) / GB/s")
-lim_add_wp100_plot = lim_add_wp100_plot + xlim(0,2) + ylim(200,600) + scale_linetype_manual(values=c("solid", "twodash"  ,"dotted"))
-lim_add_wp100_plot = lim_add_wp100_plot + theme_solarized_2(light = FALSE) +
-  scale_colour_solarized("blue")
-
-ggsave("gpu_stream_lim_add_with_nvidia.png",lim_add_wp100_plot,height=3.5)
-ggsave("gpu_stream_lim_add_with_nvidia.svg",lim_add_wp100_plot,height=3.5)
