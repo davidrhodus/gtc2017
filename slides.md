@@ -402,14 +402,13 @@ show OS support table, and why nvenc is a valid choice
 
 [/columns]
 
+## codec configuration
 
-## Ultrafast Baseline h264
 
-## Ultrafast Baseline h265
 
-## Ultrafast Baseline h264 on GPU
+## h264
 
-## Ultrafast Baseline h265 on GPU
+## h265
 
 
 # Summary
