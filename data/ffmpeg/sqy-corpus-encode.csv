@@ -1,0 +1,106 @@
+alg,filename,shorthand,flags,realtime_sec,cpu_user_sec,cpu_sys_sec,exit,threads,timestamp
+encode,Volvis_arteries_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.20,0.21,0.10,0,8,1494342819
+encode,Volvis_arteries_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,1.26,4.33,0.23,0,8,1494342818
+encode,Volvis_arteries_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.93,0.04,1.83,0,1,1494342818
+encode,Volvis_arteries_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.36,0.05,2.30,0,1,1494342818
+encode,Tomancak_spim_TL50_Angle1_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.63,3.71,0.25,0,8,1494342774
+encode,Tomancak_spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.48,0.13,2.38,0,1,1494342774
+encode,Tomancak_spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.86,0.13,2.71,0,1,1494342774
+encode,Tomancak_spim_TL50_Angle1_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,8.25,60.59,1.38,0,8,1494342774
+encode,Myers_synthetic_blobs_noise_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.30,1.42,0.09,0,8,1494342808
+encode,Myers_synthetic_blobs_noise_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,4.01,25.21,0.47,0,8,1494342805
+encode,Myers_synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.93,0.04,1.87,0,1,1494342807
+encode,Myers_synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.39,0.05,2.37,0,1,1494342808
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.16,0.19,0.05,0,8,1494342936
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,0.57,1.84,0.16,0,8,1494342936
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.85,0.03,1.76,0,1,1494342936
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.45,0.05,2.44,0,1,1494342936
+encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.56,3.12,0.22,0,8,1494342789
+encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.28,0.08,2.07,0,1,1494342788
+encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.61,0.08,2.35,0,1,1494342790
+encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,6.26,42.13,1.31,0,8,1494342790
+encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.15,0.06,0.06,0,8,1494342936
+encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,0.43,1.02,0.15,0,8,1494342936
+encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.73,0.03,1.85,0,1,1494342936
+encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.45,0.03,2.30,0,1,1494342936
+encode,Keller_Zebrafish_HisGFP_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,1.48,7.15,0.60,0,8,1494342774
+encode,Keller_Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,5.20,0.25,2.90,0,1,1494342772
+encode,Keller_Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,5.03,0.27,2.54,0,1,1494342775
+encode,Keller_Zebrafish_HisGFP_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,17.31,124.58,2.30,0,8,1494342774
+encode,Keller_TM0066_Droso_HisGFP_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.34,1.43,0.14,0,8,1494342795
+encode,Keller_TM0066_Droso_HisGFP_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,3.38,23.42,0.42,0,8,1494342802
+encode,Keller_TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.05,0.07,2.12,0,1,1494342805
+encode,Keller_TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.59,0.07,2.46,0,1,1494342805
+encode,Volvis_arteries_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,0.12,0.01,0.04,1,1,1494342817
+encode,Volvis_arteries_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,1.26,4.40,0.22,0,8,1494342817
+encode,Volvis_arteries_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.86,0.04,1.91,0,1,1494342817
+encode,Volvis_arteries_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.19,0.22,0.08,0,8,1494342936
+encode,Volvis_arteries_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.48,0.05,2.40,0,1,1494342936
+encode,Keller_TM2497_Droso_HisGFP_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,4.96,37.28,0.38,0,8,1494342794
+encode,Keller_TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.09,0.09,2.16,0,1,1494342795
+encode,Keller_TM2497_Droso_HisGFP_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.35,1.62,0.15,0,8,1494342799
+encode,Keller_TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.71,0.07,2.63,0,1,1494342802
+encode,Huisken_vasculature_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.33,1.26,0.14,0,8,1494342816
+encode,Huisken_vasculature_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,3.38,24.44,0.39,0,8,1494342814
+encode,Huisken_vasculature_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.64,0.05,2.50,0,1,1494342814
+encode,Huisken_vasculature_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.13,0.05,2.05,0,1,1494342816
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.17,0.19,0.06,0,8,1494342936
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,0.58,1.90,0.14,0,8,1494342935
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.81,0.03,1.92,0,1,1494342936
+encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.34,0.04,2.39,0,1,1494342935
+encode,Keller_TM0829_Droso_PanNeural_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.31,1.30,0.14,0,8,1494342812
+encode,Keller_TM0829_Droso_PanNeural_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,4.04,29.47,0.38,0,8,1494342813
+encode,Keller_TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.58,0.06,2.46,0,1,1494342813
+encode,Keller_TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.03,0.06,2.02,0,1,1494342814
+encode,Hyman_ky5346_3_SI_great37-1_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.15,0.11,0.07,0,8,1494342936
+encode,Hyman_ky5346_3_SI_great37-1_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,0.52,1.38,0.14,0,8,1494342935
+encode,Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.80,0.03,2.00,0,1,1494342935
+encode,Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.54,0.04,2.41,0,1,1494342936
+encode,Huisken_vasculature_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.32,1.24,0.12,0,8,1494342816
+encode,Huisken_vasculature_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,3.49,25.32,0.39,0,8,1494342816
+encode,Huisken_vasculature_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.16,0.04,2.02,0,1,1494342817
+encode,Huisken_vasculature_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.51,0.07,2.51,0,1,1494342817
+encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.66,3.42,0.31,0,8,1494342774
+encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.42,0.10,2.11,0,1,1494342774
+encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.67,0.14,2.50,0,1,1494342774
+encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,7.71,50.88,1.40,0,8,1494342774
+encode,Myers_synthetic_filaments_noise_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.28,1.33,0.11,0,8,1494342812
+encode,Myers_synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.52,0.06,2.34,0,1,1494342808
+encode,Myers_synthetic_filaments_noise_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,3.35,20.79,0.43,0,8,1494342809
+encode,Myers_synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.86,0.05,1.92,0,1,1494342811
+encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.62,3.35,0.25,0,8,1494342774
+encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,5.04,0.11,2.85,0,1,1494342774
+encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.39,0.10,2.33,0,1,1494342788
+encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,6.17,42.73,1.28,0,8,1494342786
+encode,Tomancak_spim_TL05_Angle1_unweighted,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.84,5.25,0.35,0,8,1494342772
+encode,Tomancak_spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.38,0.11,2.32,0,1,1494342776
+encode,Tomancak_spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.69,0.15,2.49,0,1,1494342775
+encode,Tomancak_spim_TL05_Angle1_unweighted,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,12.23,95.49,0.97,0,8,1494342774
+encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.28,0.96,0.14,0,8,1494342804
+encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.10,0.06,2.05,0,1,1494342803
+encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,2.42,17.08,0.42,0,8,1494342805
+encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.82,0.07,2.55,0,1,1494342805
+encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.29,0.93,0.14,0,8,1494342803
+encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.70,0.07,2.61,0,1,1494342799
+encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,2.30,14.98,0.71,0,8,1494342803
+encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.09,0.07,2.07,0,1,1494342802
+encode,Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.53,0.06,2.40,0,1,1494342804
+encode,Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.87,0.04,1.92,0,1,1494342807
+encode,Myers_synthetic_blobs_noise_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.23,0.70,0.09,0,8,1494342811
+encode,Myers_synthetic_blobs_noise_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,2.04,10.52,0.34,0,8,1494342810
+encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.26,0.58,0.13,0,8,1494342814
+encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,1.48,8.89,0.52,0,8,1494342814
+encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.56,0.06,2.52,0,1,1494342812
+encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.99,0.04,1.95,0,1,1494342813
+encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.55,2.87,0.23,0,8,1494342794
+encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.62,0.10,2.44,0,1,1494342792
+encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,4.96,34.16,1.23,0,8,1494342793
+encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,4.35,0.08,2.11,0,1,1494342794
+encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,1.13,6.19,0.54,0,8,1494342774
+encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,5.20,0.34,2.84,0,1,1494342774
+encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,5.12,0.25,2.57,0,1,1494342775
+encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,16.13,116.12,2.33,0,8,1494342774
+encode,Myers_synthetic_filaments_noise_weighted_power_3_1,libx265_ultrafast,-c:v libx265 -x265-params pools=8,-,2.22,13.40,0.43,0,8,1494342805
+encode,Myers_synthetic_filaments_noise_weighted_power_3_1,libx264_ultrafast,-c:v libx264 -preset ultrafast,0.28,0.80,0.12,0,8,1494342812
+encode,Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast,-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1,3.97,0.05,1.88,0,1,1494342809
+encode,Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast,-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0,4.45,0.06,2.51,0,1,1494342810
