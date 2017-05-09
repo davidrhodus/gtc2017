@@ -380,6 +380,7 @@ show OS support table, and why nvenc is a valid choice
 - 128GB DDR4 RAM
 - 2x [Nvidia GeForce GTX1080](https://en.wikipedia.org/wiki/GeForce_10_series)
 - CentOS 7.1
+- host CPU limited to 8 threads to be close to production environment
 
 [/column]
 
@@ -402,8 +403,52 @@ show OS support table, and why nvenc is a valid choice
 
 [/columns]
 
-## codec configuration
+## what I measured
 
+- simple workflow based on ffmpeg performed on all:  
+
+  	1. quantize .tif images with sqeazy (produce *input.y4m*)
+  	2. encode .y4m video with ffmpeg (take time, input/output files in ramdisk)
+  	3. decode from encoded.y4m and obtain roundtrip.y4m
+  	4. compare quality of *input.y4m* and _roundtrip.y4m_
+  
+- all timings based on _/usr/bin/time_ if not stated otherwise
+- orchestration on our HPC infrastructure with [snakemake](https://snakemake.readthedocs.io/en/stable/)
+
+## CPU only
+
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![](data/ffmpeg//ffmpeg_video_codec_cpuonly.svg){ width=90% }
+
+</center>
+
+
+[/column]
+
+[column,class="col-xs-4"]
+
+
+- x264 is fast, but doesn't provide high compression
+- x265 is not fast, but does provide high compression
+
+- preset study ongoing with downstream analysis/processing
+
+<center style="font-size: 1.25em">
+
+**GPUs to the rescue?**
+
+</center>
+
+
+[/column]
+
+[/columns]
 
 
 ## h264

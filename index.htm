@@ -309,6 +309,7 @@ mean +/- std = 11 +/- 3</li>
 <li>128GB DDR4 RAM</li>
 <li>2x <a href="https://en.wikipedia.org/wiki/GeForce_10_series">Nvidia GeForce GTX1080</a></li>
 <li>CentOS 7.1</li>
+<li>host CPU limited to 8 threads to be close to production environment</li>
 </ul>
 </div>
 <div class="col-xs-6">
@@ -326,14 +327,44 @@ mean +/- std = 11 +/- 3</li>
 </ul>
 </div>
 </div>
-</section><section id="ultrafast-baseline-h264" class="slide level2">
-<h1>Ultrafast Baseline h264</h1>
-</section><section id="ultrafast-baseline-h265" class="slide level2">
-<h1>Ultrafast Baseline h265</h1>
-</section><section id="ultrafast-baseline-h264-on-gpu" class="slide level2">
-<h1>Ultrafast Baseline h264 on GPU</h1>
-</section><section id="ultrafast-baseline-h265-on-gpu" class="slide level2">
-<h1>Ultrafast Baseline h265 on GPU</h1>
+</section><section id="what-i-measured" class="slide level2">
+<h1>what I measured</h1>
+<ul>
+<li><p>simple workflow based on ffmpeg performed on all:</p>
+<ol type="1">
+<li>quantize .tif images with sqeazy (produce <em>input.y4m</em>)</li>
+<li>encode .y4m video with ffmpeg (take time, input/output files in ramdisk)</li>
+<li>decode from encoded.y4m and obtain roundtrip.y4m</li>
+<li>compare quality of <em>input.y4m</em> and <em>roundtrip.y4m</em></li>
+</ol></li>
+<li>all timings based on <em>/usr/bin/time</em> if not stated otherwise</li>
+<li><p>orchestration on our HPC infrastructure with <a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a></p></li>
+</ul>
+</section><section id="cpu-only" class="slide level2">
+<h1>CPU only</h1>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="data/ffmpeg//ffmpeg_video_codec_cpuonly.svg" style="width:90.0%" />
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li>x264 is fast, but doesn't provide high compression</li>
+<li><p>x265 is not fast, but does provide high compression</p></li>
+<li><p>preset study ongoing with downstream analysis/processing</p></li>
+</ul>
+<center style="font-size: 1.25em">
+<p><strong>GPUs to the rescue?</strong></p>
+</center>
+</div>
+</div>
+</section><section id="h264" class="slide level2">
+<h1>h264</h1>
+</section><section id="h265" class="slide level2">
+<h1>h265</h1>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section></section>
       </div>
