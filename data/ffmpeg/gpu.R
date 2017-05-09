@@ -47,7 +47,10 @@ enhanced_plot = enhanced_plot + geom_point(size=4)
 enhanced_plot = enhanced_plot + ggtitle("ffmpeg (8c of Intel Xeon E5-2680v3, 1 GTX1080)")
 enhanced_plot = enhanced_plot + xlab("ingest bandwidth / MB/s") + ylab(" size(raw) / size(encoded) ")
 
-
+cat(sprintf("libx264 median bandwidth\n"))
+median((including_nvprof %>% filter(encoder == "libx264"))$ingest_bw_mb_per_sec)
+cat(sprintf("nvenc_h264 median bandwidth\n"))
+median((including_nvprof %>% filter(encoder == "nvenc_h264"))$ingest_bw_mb_per_sec)
 ggsave("ffmpeg_cpugpu_video_codecs_enhanced.png",enhanced_plot,height=5)
 ggsave("ffmpeg_cpugpu_video_codecs_enhanced.svg",enhanced_plot,height=5)
 ggsave("ffmpeg_cpugpu_video_codecs_enhanced.pdf",enhanced_plot,height=5)

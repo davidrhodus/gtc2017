@@ -1,5 +1,5 @@
 ---
-title: high-bandwidth 3D image compression to boost predictive life sciences (WIP)
+title: high-bandwidth 3D image compression to boost predictive life sciences
 author: Peter Steinbach
 origin: Scionics Computer Innovation GmbH
 email: steinbach@scionics.de
@@ -455,7 +455,7 @@ show OS support table, and why nvenc is a valid choice
 
 - running nvenc in ffmpeg observed with  
 `nvprof --print-api-trace ffmpeg ...`
-- cuCtxCreate/cuCtxDestroy obtain time delta from api trace
+- cuCtxCreate/cuCtxDestroy based time delta from api trace
 
 [columns,class="row vertical-align"]
 
@@ -483,6 +483,72 @@ ffmpeg induces quite some overhead on top of nvenc?
 ## GPU enhanced encoding
 
 
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![](data/ffmpeg/ffmpeg_cpugpu_video_codecs_enhanced.svg){ width=90% }
+
+</center>
+
+
+[/column]
+
+[column,class="col-xs-4"]
+
+- *here*: using nvprof based timing
+- _nvenc_h264_ offers surprising compression ratios in comparison to _libx264_
+- libx264 median bandwidth: 353 MB/s
+- nvenc_h264 median bandwidth: 46 MB/s
+
+<center style="font-size: 1.25em">
+
+**GPU encoding not there yet.**
+
+</center>
+[/column]
 
 
 # Summary
+
+## high-bandwidth 3D image compression
+
+- tough business given modern CMOS cameras (around 1GB/s at 16bit greyscale)
+- today: 
+	- many codecs out there 
+	- many bit ranges coming about (8,10,12 bits)
+	
+- multi-core implementations very competitive 
+  (either in compression ratio or speed)
+  
+- nvenc through ffmpeg difficult to use/measure
+
+## Thank you for your attention!
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+![](img/opensource-550x475.png)  
+
+**[github.com/psteinb/gtc2017](https://github.com/psteinb/gtc2017)**
+</center>
+
+[/column]
+
+
+[column,class="col-xs-4"]
+
+<center style="font-size: 1.25em">
+For questions, concerns or suggestions:
+  
+[Open an issue!](https://github.com/psteinb/gtc2017/issues)
+
+</center>
+
+[/column]
+
+[/columns]
