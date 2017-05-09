@@ -5,7 +5,7 @@ QUAL_CSV=$(wildcard *quality.csv)
 
 all : sqy-corpus-encode.csv sqy-corpus-encode-nvprof.csv sqy-corpus-quality.csv 
 
-plots : ffmpeg_video_codec_cpuonly.svg ffmpeg_timing_difference.svg
+plots : ffmpeg_video_codec_cpuonly.svg ffmpeg_timing_difference.svg ffmpeg_cpugpu_video_codecs_enhanced.svg ffmpeg_cpugpu_video_codecs_realtime.svg
 
 sqy-corpus-encode.csv : $(ENCODE_CSV)
 	@echo "alg,filename,shorthand,flags,realtime_sec,cpu_user_sec,cpu_sys_sec,exit,threads,timestamp" > $@
@@ -24,6 +24,10 @@ ffmpeg_video_codec_cpuonly.svg :  sqy-corpus-encode.csv sqy-corpus-quality.csv
 
 ffmpeg_timing_difference.svg :  sqy-corpus-encode.csv sqy-corpus-encode-nvprof.csv
 	@./timing.R
+
+ffmpeg_cpugpu_video_codecs_enhanced.svg :  sqy-corpus-encode.csv sqy-corpus-encode-nvprof.csv sqy-corpus-quality.csv
+	@./gpu.R
+
 
 clean :
 	@rm -fv sqy-corpus-encode.csv sqy-corpus-encode-nvprof.csv sqy-corpus-quality.csv ffmpeg_video_codec_cpuonly.svg
