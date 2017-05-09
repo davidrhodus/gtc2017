@@ -451,9 +451,38 @@ show OS support table, and why nvenc is a valid choice
 [/columns]
 
 
-## h264
+## challenging measurements 
 
-## h265
+- running nvenc in ffmpeg observed with  
+`nvprof --print-api-trace ffmpeg ...`
+- cuCtxCreate/cuCtxDestroy obtain time delta from api trace
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![](data/ffmpeg/ffmpeg_timing_difference.svg){ width=90% }
+
+</center>
+
+
+[/column]
+
+[column,class="col-xs-4"]
+
+<center>
+
+ffmpeg induces quite some overhead on top of nvenc?
+
+</center>
+
+[/column]
+
+## GPU enhanced encoding
+
+
 
 
 # Summary

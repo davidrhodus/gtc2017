@@ -361,10 +361,28 @@ mean +/- std = 11 +/- 3</li>
 </center>
 </div>
 </div>
-</section><section id="h264" class="slide level2">
-<h1>h264</h1>
-</section><section id="h265" class="slide level2">
-<h1>h265</h1>
+</section><section id="challenging-measurements" class="slide level2">
+<h1>challenging measurements</h1>
+<ul>
+<li>running nvenc in ffmpeg observed with<br />
+<code>nvprof --print-api-trace ffmpeg ...</code></li>
+<li>cuCtxCreate/cuCtxDestroy obtain time delta from api trace</li>
+</ul>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="data/ffmpeg/ffmpeg_timing_difference.svg" style="width:90.0%" />
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<center>
+<p>ffmpeg induces quite some overhead on top of nvenc?</p>
+</center>
+</div>
+</section><section id="section" class="slide level2">
+<h1></h1>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section></section>
       </div>
