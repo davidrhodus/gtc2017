@@ -14,7 +14,7 @@ sqy-corpus-encode-nvprof.csv : $(ENCODENVPROF_CSV)
 	@cat $^ >> $@
 
 sqy-corpus-quality.csv : $(QUAL_CSV)
-	@echo "filename,shorthand,flags,timestamp,bits_p_sample,left_drange,mse,nrmse,psnr,right_drange" > $@
+	@echo "filename,shorthand,flags,timestamp,raw_size_bytes,encoded_size_bytes,bits_p_sample,left_drange,mse,nrmse,psnr,right_drange" > $@
 	@cat $^ >> $@
 
 clean :
