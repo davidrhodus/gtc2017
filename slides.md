@@ -416,12 +416,13 @@ mean +/- std = 11 +/- 3
 *software*
 </div>
 
-- [ffmpeg](https://ffmpeg.org/) 3.0.7
+- [ffmpeg](https://ffmpeg.org/) 3.0.7 ([build instructions](https://gist.github.com/Brainiarc7/988473b79fd5c8f0db54b92ebb47387a))
 - [x264]( http://git.videolan.org/git/x264.git ) (commit 90a61ec764)
 - [x265]( https://bitbucket.org/multicoreware/x265/wiki/Home ) 2.4
-- [GNU gcc](https://gcc.gnu.org/) 6.3
+- [GNU gcc](https://gcc.gnu.org/) 6.3 (5.4 when CUDA is required)
 - [Nvidia Media SDK](https://developer.nvidia.com/nvidia-video-codec-sdk) v7.1
 - Nvidia driver 375.26
+- CUDA 8.0.61
 - [snakemake](https://snakemake.readthedocs.io/en/stable/) 3.11.2 to orchestrate benchmarks
 
 [/column]
@@ -524,16 +525,10 @@ ffmpeg induces quite some overhead on top of nvenc?
 [column,class="col-xs-4"]
 
 - *here*: using nvprof based timing
-- _nvenc_h264_ offers surprising compression ratios in comparison to _libx264_
-- libx264 median bandwidth: 353 MB/s
-- nvenc_h264 median bandwidth: 46 MB/s 
-(nvenc docs suggest 6420 MB/s)
+- _nvenc_h264_ offers surprising compression ratios in comparison to _libx264_ (preset definitions differ)
+- bandwidths are surprisingly low
+(nvenc docs suggest 6420 MB/s for h264 in this setting)
 
-<center style="font-size: 1.25em">
-
-**GPU encoding not there yet.**
-
-</center>
 [/column]
 
 ## Profiling details

@@ -335,12 +335,13 @@ mean +/- std = 11 +/- 3</li>
 <p><em>software</em></p>
 </div>
 <ul>
-<li><a href="https://ffmpeg.org/">ffmpeg</a> 3.0.7</li>
+<li><a href="https://ffmpeg.org/">ffmpeg</a> 3.0.7 (<a href="https://gist.github.com/Brainiarc7/988473b79fd5c8f0db54b92ebb47387a">build instructions</a>)</li>
 <li><a href="http://git.videolan.org/git/x264.git">x264</a> (commit 90a61ec764)</li>
 <li><a href="https://bitbucket.org/multicoreware/x265/wiki/Home">x265</a> 2.4</li>
-<li><a href="https://gcc.gnu.org/">GNU gcc</a> 6.3</li>
+<li><a href="https://gcc.gnu.org/">GNU gcc</a> 6.3 (5.4 when CUDA is required)</li>
 <li><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Media SDK</a> v7.1</li>
 <li>Nvidia driver 375.26</li>
+<li>CUDA 8.0.61</li>
 <li><a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a> 3.11.2 to orchestrate benchmarks</li>
 </ul>
 </div>
@@ -412,13 +413,9 @@ mean +/- std = 11 +/- 3</li>
 <div class="col-xs-4">
 <ul>
 <li><em>here</em>: using nvprof based timing</li>
-<li><em>nvenc_h264</em> offers surprising compression ratios in comparison to <em>libx264</em></li>
-<li>libx264 median bandwidth: 353 MB/s</li>
-<li>nvenc_h264 median bandwidth: 46 MB/s (nvenc docs suggest 6420 MB/s)</li>
+<li><em>nvenc_h264</em> offers surprising compression ratios in comparison to <em>libx264</em> (preset definitions differ)</li>
+<li>bandwidths are surprisingly low (nvenc docs suggest 6420 MB/s for h264 in this setting)</li>
 </ul>
-<center style="font-size: 1.25em">
-<p><strong>GPU encoding not there yet.</strong></p>
-</center>
 </div>
 </section><section id="profiling-details" class="slide level2">
 <h1>Profiling details</h1>
