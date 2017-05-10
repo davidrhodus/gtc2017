@@ -316,7 +316,7 @@ mean +/- std = 11 +/- 3
 
 <center>
 
-![](data/sqy/sqy_quantizer.svg){width=100%}
+![](data/sqy/sqy_median_based_mnmse.svg){width=100%}
 
 </center>
 
@@ -326,7 +326,7 @@ mean +/- std = 11 +/- 3
 
 - lossy bucket based quantisation (16 -> 8 bits per pixel)
 - quality loss minimal
-- bandwidth enough to take 4 cameras
+- bandwidth enough to take 8 cameras
 
 [/column]
 
