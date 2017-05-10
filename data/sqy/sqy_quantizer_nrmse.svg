@@ -37,20 +37,20 @@
 <polyline points='258.10,250.46 258.10,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
 <polyline points='359.88,250.46 359.88,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
 <polyline points='461.67,250.46 461.67,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
-<circle cx='432.87' cy='238.55' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='240.92' cy='181.56' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='462.74' cy='166.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='417.26' cy='226.65' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='239.44' cy='222.89' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='187.50' cy='223.64' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='346.34' cy='208.76' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='116.92' cy='123.83' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
-<circle cx='85.65' cy='170.62' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <circle cx='223.21' cy='37.43' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='346.34' cy='208.76' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='240.92' cy='181.56' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <circle cx='456.79' cy='240.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <circle cx='457.98' cy='213.10' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <circle cx='478.86' cy='240.14' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='116.92' cy='123.83' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='85.65' cy='170.62' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='462.74' cy='166.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='417.26' cy='226.65' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='239.44' cy='222.89' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='432.87' cy='238.55' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <circle cx='140.82' cy='126.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='187.50' cy='223.64' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
 <line x1='293.63' y1='250.46' x2='293.63' y2='27.28' style='stroke-width: 4.27; stroke: #FF0000; stroke-linecap: butt;' clip-path='url(#cp1)' />
 <g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
 <g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
@@ -134,6 +134,6 @@
 <g clip-path='url(#cp2)'><text x='346.54' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>5000</text></g>
 <g clip-path='url(#cp2)'><text x='448.32' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>6000</text></g>
 <g clip-path='url(#cp2)'><text x='204.40' y='279.21' style='font-size: 11.00pt; font-family: Arial;'>ingest bandwidth / MB/s</text></g>
-<g clip-path='url(#cp2)'><text transform='translate(15.56,212.20) rotate(-90)' style='font-size: 11.00pt; font-family: Arial;'> RMS / (max(I)-min(I)) </text></g>
+<g clip-path='url(#cp2)'><text transform='translate(15.56,255.41) rotate(-90)' style='font-size: 11.00pt; font-family: Arial;'> RMS / (max(original)-min(original)) </text></g>
 <g clip-path='url(#cp2)'><text x='65.99' y='17.40' style='font-size: 13.20pt; font-family: Arial;'>sqeazy quantiser (8 threads of Intel E5-2680v3 CPU)</text></g>
 </svg>

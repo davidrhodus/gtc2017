@@ -3,103 +3,103 @@ encode,Volvis_arteries_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -prese
 encode,Volvis_arteries_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1.21,4.19,0.20,0,8,1494366156
 encode,Volvis_arteries_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.44,0.05,2.34,0,1,1494366247
 encode,Volvis_arteries_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.84,0.04,1.99,0,1,1494366252
-encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.25,0.91,0.10,0,8,1494365928
-encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.20,14.85,0.41,0,8,1494365996
-encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.71,0.09,2.56,0,1,1494366097
-encode,Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.83,0.06,1.94,0,1,1494366140
-encode,Tomancak_spim_TL50_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",8.04,60.33,1.39,0,8,1494365558
-encode,Tomancak_spim_TL50_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.64,3.69,0.26,0,8,1494365825
-encode,Tomancak_spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.50,0.10,2.34,0,1,1494365854
-encode,Tomancak_spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.03,0.11,2.79,0,1,1494366017
-encode,Myers_synthetic_blobs_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.89,24.95,0.33,0,8,1494366049
-encode,Myers_synthetic_blobs_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.32,1.45,0.12,0,8,1494366061
-encode,Myers_synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.01,0.05,1.94,0,1,1494366167
-encode,Myers_synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.63,0.06,2.37,0,1,1494366192
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.16,0.19,0.06,0,8,1494366159
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.56,1.85,0.16,0,8,1494366164
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.88,0.03,1.93,0,1,1494366258
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.36,0.04,2.32,0,1,1494366267
-encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",6.19,41.73,0.86,0,8,1494365593
-encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.57,3.09,0.25,0,8,1494365836
-encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.21,0.08,2.17,0,1,1494366075
-encode,Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.57,0.10,2.45,0,1,1494366079
-encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.42,1.04,0.13,0,8,1494366192
-encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.15,0.07,0.06,0,8,1494366201
-encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.72,0.03,1.86,0,1,1494366270
-encode,Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.42,0.04,2.25,0,1,1494366271
-encode,Keller_Zebrafish_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",17.34,124.67,2.39,0,8,1494365714
-encode,Keller_Zebrafish_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1.41,7.16,0.59,0,8,1494365780
-encode,Keller_Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",5.01,0.26,2.58,0,1,1494365919
-encode,Keller_Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.16,0.27,2.83,0,1,1494366016
-encode,Keller_TM0066_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.36,23.73,0.44,0,8,1494365869
-encode,Keller_TM0066_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.30,1.36,0.11,0,8,1494365992
-encode,Keller_TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.66,0.08,2.57,0,1,1494366106
-encode,Keller_TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.04,0.06,2.08,0,1,1494366139
+encode,TM0066_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.25,0.91,0.10,0,8,1494365928
+encode,TM0066_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.20,14.85,0.41,0,8,1494365996
+encode,TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.71,0.09,2.56,0,1,1494366097
+encode,TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.83,0.06,1.94,0,1,1494366140
+encode,spim_TL50_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",8.04,60.33,1.39,0,8,1494365558
+encode,spim_TL50_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.64,3.69,0.26,0,8,1494365825
+encode,spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.50,0.10,2.34,0,1,1494365854
+encode,spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.03,0.11,2.79,0,1,1494366017
+encode,synthetic_blobs_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.89,24.95,0.33,0,8,1494366049
+encode,synthetic_blobs_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.32,1.45,0.12,0,8,1494366061
+encode,synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.01,0.05,1.94,0,1,1494366167
+encode,synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.63,0.06,2.37,0,1,1494366192
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.16,0.19,0.06,0,8,1494366159
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.56,1.85,0.16,0,8,1494366164
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.88,0.03,1.93,0,1,1494366258
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.36,0.04,2.32,0,1,1494366267
+encode,spim_TL08_Angle1_Channel1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",6.19,41.73,0.86,0,8,1494365593
+encode,spim_TL08_Angle1_Channel1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.57,3.09,0.25,0,8,1494365836
+encode,spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.21,0.08,2.17,0,1,1494366075
+encode,spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.57,0.10,2.45,0,1,1494366079
+encode,ky5346_3_SI_great37-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.42,1.04,0.13,0,8,1494366192
+encode,ky5346_3_SI_great37-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.15,0.07,0.06,0,8,1494366201
+encode,ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.72,0.03,1.86,0,1,1494366270
+encode,ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.42,0.04,2.25,0,1,1494366271
+encode,Zebrafish_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",17.34,124.67,2.39,0,8,1494365714
+encode,Zebrafish_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1.41,7.16,0.59,0,8,1494365780
+encode,Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",5.01,0.26,2.58,0,1,1494365919
+encode,Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.16,0.27,2.83,0,1,1494366016
+encode,TM0066_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.36,23.73,0.44,0,8,1494365869
+encode,TM0066_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.30,1.36,0.11,0,8,1494365992
+encode,TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.66,0.08,2.57,0,1,1494366106
+encode,TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.04,0.06,2.08,0,1,1494366139
 encode,Volvis_arteries_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1.24,4.34,0.22,0,8,1494366136
 encode,Volvis_arteries_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.19,0.22,0.08,0,8,1494366156
 encode,Volvis_arteries_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.39,0.05,2.35,0,1,1494366242
 encode,Volvis_arteries_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.81,0.04,1.85,0,1,1494366244
-encode,Tomancak_spim_TL05_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",12.35,96.58,1.63,0,8,1494365635
-encode,Tomancak_spim_TL05_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.83,5.23,0.34,0,8,1494365700
-encode,Tomancak_spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.44,0.11,2.19,0,1,1494365969
-encode,Tomancak_spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.94,0.13,2.64,0,1,1494365999
-encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.48,17.28,0.68,0,8,1494365847
-encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.29,0.97,0.13,0,8,1494365994
-encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.09,0.06,2.05,0,1,1494366081
-encode,Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.73,0.09,2.70,0,1,1494366098
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.16,0.19,0.06,0,8,1494366170
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.57,1.89,0.14,0,8,1494366180
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.51,0.04,2.53,0,1,1494366258
-encode,Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.78,0.03,1.95,0,1,1494366263
-encode,Keller_TM0829_Droso_PanNeural_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.31,1.32,0.12,0,8,1494366119
-encode,Keller_TM0829_Droso_PanNeural_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",4.09,29.39,0.39,0,8,1494366123
-encode,Keller_TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.93,0.06,2.02,0,1,1494366208
-encode,Keller_TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.45,0.05,2.44,0,1,1494366211
-encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.62,3.36,0.27,0,8,1494365610
-encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",7.48,51.06,1.43,0,8,1494365822
-encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.84,0.14,2.63,0,1,1494365902
-encode,Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.34,0.12,2.28,0,1,1494366032
-encode,Hyman_ky5346_3_SI_great37-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.15,0.11,0.06,0,8,1494366182
-encode,Hyman_ky5346_3_SI_great37-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.52,1.41,0.13,0,8,1494366198
-encode,Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.46,0.03,2.40,0,1,1494366269
-encode,Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.84,0.02,1.84,0,1,1494366273
-encode,Myers_synthetic_filaments_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.27,20.48,0.26,0,8,1494366064
-encode,Myers_synthetic_filaments_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.29,1.33,0.11,0,8,1494366072
-encode,Myers_synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.95,0.05,1.92,0,1,1494366166
-encode,Myers_synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.55,0.05,2.40,0,1,1494366184
-encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.59,3.25,0.27,0,8,1494365623
-encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",6.29,41.84,0.70,0,8,1494365805
-encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.86,0.13,2.73,0,1,1494365887
-encode,Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.45,0.11,2.32,0,1,1494366002
-encode,Huisken_vasculature_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.32,1.26,0.13,0,8,1494366127
-encode,Huisken_vasculature_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.54,25.59,0.68,0,8,1494366129
-encode,Huisken_vasculature_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.19,0.06,2.17,0,1,1494366227
-encode,Huisken_vasculature_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.67,0.06,2.64,0,1,1494366236
-encode,Huisken_vasculature_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.31,1.17,0.14,0,8,1494366131
-encode,Huisken_vasculature_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.50,25.03,0.71,0,8,1494366132
-encode,Huisken_vasculature_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.11,0.04,2.04,0,1,1494366227
-encode,Huisken_vasculature_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.45,0.07,2.50,0,1,1494366238
-encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",5.13,34.44,1.24,0,8,1494365578
-encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.54,2.85,0.23,0,8,1494365843
-encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.27,0.09,2.14,0,1,1494365932
-encode,Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.65,0.10,2.55,0,1,1494365979
-encode,Myers_synthetic_blobs_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.06,10.48,0.31,0,8,1494366075
-encode,Myers_synthetic_blobs_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.25,0.71,0.11,0,8,1494366116
-encode,Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.02,0.05,2.00,0,1,1494366148
-encode,Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.47,0.06,2.46,0,1,1494366191
-encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.26,0.60,0.12,0,8,1494366123
-encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1.43,8.85,0.32,0,8,1494366124
-encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.60,0.05,2.55,0,1,1494366202
-encode,Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.09,0.04,1.98,0,1,1494366219
-encode,Keller_TM2497_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.35,1.60,0.13,0,8,1494365923
-encode,Keller_TM2497_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",4.92,37.45,0.56,0,8,1494365987
-encode,Keller_TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.65,0.07,2.52,0,1,1494366139
-encode,Keller_TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.16,0.06,2.14,0,1,1494366147
-encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",15.53,114.68,2.21,0,8,1494365660
-encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1.14,6.06,0.55,0,8,1494365755
-encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.98,0.23,2.55,0,1,1494365907
-encode,Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.32,0.24,2.85,0,1,1494366020
-encode,Myers_synthetic_filaments_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.20,13.31,0.45,0,8,1494365996
-encode,Myers_synthetic_filaments_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.26,0.79,0.10,0,8,1494366057
-encode,Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.85,0.05,1.95,0,1,1494366157
-encode,Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.62,0.06,2.39,0,1,1494366174
+encode,spim_TL05_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",12.35,96.58,1.63,0,8,1494365635
+encode,spim_TL05_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.83,5.23,0.34,0,8,1494365700
+encode,spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.44,0.11,2.19,0,1,1494365969
+encode,spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.94,0.13,2.64,0,1,1494365999
+encode,TM2497_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.48,17.28,0.68,0,8,1494365847
+encode,TM2497_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.29,0.97,0.13,0,8,1494365994
+encode,TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.09,0.06,2.05,0,1,1494366081
+encode,TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.73,0.09,2.70,0,1,1494366098
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.16,0.19,0.06,0,8,1494366170
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.57,1.89,0.14,0,8,1494366180
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.51,0.04,2.53,0,1,1494366258
+encode,HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.78,0.03,1.95,0,1,1494366263
+encode,TM0829_Droso_PanNeural_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.31,1.32,0.12,0,8,1494366119
+encode,TM0829_Droso_PanNeural_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",4.09,29.39,0.39,0,8,1494366123
+encode,TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.93,0.06,2.02,0,1,1494366208
+encode,TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.45,0.05,2.44,0,1,1494366211
+encode,spim_TL05_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.62,3.36,0.27,0,8,1494365610
+encode,spim_TL05_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",7.48,51.06,1.43,0,8,1494365822
+encode,spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.84,0.14,2.63,0,1,1494365902
+encode,spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.34,0.12,2.28,0,1,1494366032
+encode,ky5346_3_SI_great37-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.15,0.11,0.06,0,8,1494366182
+encode,ky5346_3_SI_great37-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",0.52,1.41,0.13,0,8,1494366198
+encode,ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.46,0.03,2.40,0,1,1494366269
+encode,ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.84,0.02,1.84,0,1,1494366273
+encode,synthetic_filaments_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.27,20.48,0.26,0,8,1494366064
+encode,synthetic_filaments_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.29,1.33,0.11,0,8,1494366072
+encode,synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.95,0.05,1.92,0,1,1494366166
+encode,synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.55,0.05,2.40,0,1,1494366184
+encode,spim_TL50_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.59,3.25,0.27,0,8,1494365623
+encode,spim_TL50_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",6.29,41.84,0.70,0,8,1494365805
+encode,spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.86,0.13,2.73,0,1,1494365887
+encode,spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.45,0.11,2.32,0,1,1494366002
+encode,vasculature_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.32,1.26,0.13,0,8,1494366127
+encode,vasculature_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.54,25.59,0.68,0,8,1494366129
+encode,vasculature_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.19,0.06,2.17,0,1,1494366227
+encode,vasculature_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.67,0.06,2.64,0,1,1494366236
+encode,vasculature_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.31,1.17,0.14,0,8,1494366131
+encode,vasculature_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",3.50,25.03,0.71,0,8,1494366132
+encode,vasculature_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.11,0.04,2.04,0,1,1494366227
+encode,vasculature_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.45,0.07,2.50,0,1,1494366238
+encode,spim_TL08_Angle1_Channel1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",5.13,34.44,1.24,0,8,1494365578
+encode,spim_TL08_Angle1_Channel1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.54,2.85,0.23,0,8,1494365843
+encode,spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.27,0.09,2.14,0,1,1494365932
+encode,spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.65,0.10,2.55,0,1,1494365979
+encode,synthetic_blobs_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.06,10.48,0.31,0,8,1494366075
+encode,synthetic_blobs_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.25,0.71,0.11,0,8,1494366116
+encode,synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.02,0.05,2.00,0,1,1494366148
+encode,synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.47,0.06,2.46,0,1,1494366191
+encode,TM0829_Droso_PanNeural_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.26,0.60,0.12,0,8,1494366123
+encode,TM0829_Droso_PanNeural_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1.43,8.85,0.32,0,8,1494366124
+encode,TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.60,0.05,2.55,0,1,1494366202
+encode,TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.09,0.04,1.98,0,1,1494366219
+encode,TM2497_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.35,1.60,0.13,0,8,1494365923
+encode,TM2497_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",4.92,37.45,0.56,0,8,1494365987
+encode,TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.65,0.07,2.52,0,1,1494366139
+encode,TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.16,0.06,2.14,0,1,1494366147
+encode,Zebrafish_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",15.53,114.68,2.21,0,8,1494365660
+encode,Zebrafish_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1.14,6.06,0.55,0,8,1494365755
+encode,Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",4.98,0.23,2.55,0,1,1494365907
+encode,Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",5.32,0.24,2.85,0,1,1494366020
+encode,synthetic_filaments_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",2.20,13.31,0.45,0,8,1494365996
+encode,synthetic_filaments_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",0.26,0.79,0.10,0,8,1494366057
+encode,synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",3.85,0.05,1.95,0,1,1494366157
+encode,synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",4.62,0.06,2.39,0,1,1494366174

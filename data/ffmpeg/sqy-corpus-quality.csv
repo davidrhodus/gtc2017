@@ -1,157 +1,157 @@
 filename,shorthand,flags,timestamp,raw_size_bytes,encoded_size_bytes,bits_p_sample,left_drange,mse,nrmse,psnr,right_drange
-Myers_synthetic_filaments_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365996,100664882,457243,8,256,3.24269,7.8022e-05,99.0612,256
-Myers_synthetic_filaments_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366057,100664882,1677506,8,256,2.07087,6.23507e-05,103.546,256
-Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366157,100664882,2819523,8,256,1.63378,5.53811e-05,105.916,256
-Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366161,100664882,2819523,8,256,1.63378,5.53811e-05,105.916,256
-Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366172,100664882,2780903,8,256,1.72406,5.68907e-05,105.378,256
-Myers_synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366174,100664882,2780903,8,256,1.72406,5.68907e-05,105.378,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365928,116521467,3910383,8,256,2.64944,6.79921e-05,101.082,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365996,116521467,670111,8,256,4.78944,9.14164e-05,95.1611,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366089,116521467,1438657,8,256,3.94159,8.29312e-05,97.1094,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366097,116521467,1425172,8,256,3.90326,8.25269e-05,97.2071,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366104,116521467,1425172,8,256,3.90326,8.25269e-05,97.2071,256
-Keller_TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366140,116521467,1438657,8,256,3.94159,8.29312e-05,97.1094,256
-Keller_Zebrafish_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365660,1256905570,1035588,8,253,2.70111,3.83326e-05,100.889,245
-Keller_Zebrafish_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365755,1256905570,22783027,8,253,1.79112,3.12147e-05,104.997,249
-Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365907,1256905570,2801684,8,253,2.50018,3.68793e-05,101.662,247
-Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366020,1256905570,2677577,8,253,2.5437,3.71988e-05,101.489,253
-Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366046,1256905570,2801684,8,253,2.50018,3.68793e-05,101.662,247
-Keller_Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366049,1256905570,2677577,8,253,2.5437,3.71988e-05,101.489,253
+synthetic_filaments_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365996,100664882,457243,8,256,3.24269,7.8022e-05,99.0612,256
+synthetic_filaments_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366057,100664882,1677506,8,256,2.07087,6.23507e-05,103.546,256
+synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366157,100664882,2819523,8,256,1.63378,5.53811e-05,105.916,256
+synthetic_filaments_noise_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366161,100664882,2819523,8,256,1.63378,5.53811e-05,105.916,256
+synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366172,100664882,2780903,8,256,1.72406,5.68907e-05,105.378,256
+synthetic_filaments_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366174,100664882,2780903,8,256,1.72406,5.68907e-05,105.378,256
+TM0066_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365928,116521467,3910383,8,256,2.64944,6.79921e-05,101.082,256
+TM0066_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365996,116521467,670111,8,256,4.78944,9.14164e-05,95.1611,256
+TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366089,116521467,1438657,8,256,3.94159,8.29312e-05,97.1094,256
+TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366097,116521467,1425172,8,256,3.90326,8.25269e-05,97.2071,256
+TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366104,116521467,1425172,8,256,3.90326,8.25269e-05,97.2071,256
+TM0066_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366140,116521467,1438657,8,256,3.94159,8.29312e-05,97.1094,256
+Zebrafish_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365660,1256905570,1035588,8,253,2.70111,3.83326e-05,100.889,245
+Zebrafish_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365755,1256905570,22783027,8,253,1.79112,3.12147e-05,104.997,249
+Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365907,1256905570,2801684,8,253,2.50018,3.68793e-05,101.662,247
+Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366020,1256905570,2677577,8,253,2.5437,3.71988e-05,101.489,253
+Zebrafish_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366046,1256905570,2801684,8,253,2.50018,3.68793e-05,101.662,247
+Zebrafish_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366049,1256905570,2677577,8,253,2.5437,3.71988e-05,101.489,253
 Volvis_arteries_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366137,25167410,230767,8,250,1.60861,7.95878e-05,106.072,256
 Volvis_arteries_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366156,25167410,78162,8,250,2.52638,9.97401e-05,101.557,256
 Volvis_arteries_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366247,25167410,1391076,8,250,1.05673,6.45064e-05,110.273,255
 Volvis_arteries_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366251,25167410,1353163,8,250,0.732388,5.37021e-05,113.94,254
 Volvis_arteries_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366252,25167410,1353163,8,250,0.732388,5.37021e-05,113.94,254
 Volvis_arteries_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366253,25167410,1391076,8,250,1.05673,6.45064e-05,110.273,255
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366123,91999365,840785,8,256,1.0096,4.45257e-05,110.73,256
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366124,91999365,144430,8,256,1.71847,5.80909e-05,105.411,256
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366202,91999365,995323,8,256,0.732316,3.79216e-05,113.941,256
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366203,91999365,995323,8,256,0.732316,3.79216e-05,113.941,256
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366216,91999365,1022638,8,256,0.753514,3.84665e-05,113.655,256
-Keller_TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366219,91999365,1022638,8,256,0.753514,3.84665e-05,113.655,256
-Tomancak_spim_TL50_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365558,396864832,4612714,8,256,10.23,9.83468e-05,87.572,256
-Tomancak_spim_TL50_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365825,396864832,43553804,8,256,5.59767,7.27488e-05,93.6018,256
-Tomancak_spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365854,396864832,1165130,8,256,11.3912,0.000103778,86.4969,256
-Tomancak_spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365891,396864832,1176066,8,256,11.6355,0.000104885,86.2847,256
-Tomancak_spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365907,396864832,1165130,8,256,11.3912,0.000103778,86.4969,256
-Tomancak_spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366017,396864832,1176066,8,256,11.6355,0.000104885,86.2847,256
-Keller_TM0066_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365869,116521467,1656961,8,256,10.7152,0.000136736,87.1086,256
-Keller_TM0066_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365992,116521467,11657181,8,256,6.23769,0.000104326,92.5192,256
-Keller_TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366106,116521467,1201842,8,256,10.8708,0.000137725,86.9645,256
-Keller_TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366115,116521467,1187058,8,256,10.7347,0.00013686,87.0904,256
-Keller_TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366139,116521467,1187058,8,256,10.7347,0.00013686,87.0904,256
-Keller_TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366147,116521467,1201842,8,256,10.8708,0.000137725,86.9645,256
-Myers_synthetic_blobs_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366049,100664882,1821655,8,256,12.4381,0.000152807,85.6176,256
-Myers_synthetic_blobs_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366061,100664882,17122837,8,256,5.51608,0.000101761,93.7486,256
-Myers_synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366158,100664882,2713548,8,256,11.216,0.000145106,86.6518,256
-Myers_synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366167,100664882,2713548,8,256,11.216,0.000145106,86.6518,256
-Myers_synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366192,100664882,2773885,8,256,11.3741,0.000146125,86.5118,256
-Myers_synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366199,100664882,2773885,8,256,11.3741,0.000146125,86.5118,256
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366159,12442136,643013,8,195,3.00093,0.000166391,99.8361,183
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366164,12442136,10043,8,195,4.09104,0.000194276,96.7373,126
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366256,12442136,950687,8,195,2.50963,0.000152162,101.624,193
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366258,12442136,919802,8,195,2.49311,0.000151661,101.69,198
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366265,12442136,919802,8,195,2.49311,0.000151661,101.69,198
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366267,12442136,950687,8,195,2.50963,0.000152162,101.624,193
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365593,328320622,1442319,8,256,8.36399,9.32428e-05,89.5859,256
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365836,328320622,31400295,8,256,5.20659,7.35673e-05,94.326,256
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365876,328320622,928789,8,256,8.64512,9.47969e-05,89.2553,256
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365948,328320622,880224,8,256,8.80151,9.56504e-05,89.076,256
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366075,328320622,928789,8,256,8.64512,9.47969e-05,89.2553,256
-Tomancak_spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366079,328320622,880224,8,256,8.80151,9.56504e-05,89.076,256
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366192,7219532,10257,8,245,1.70654,0.000114306,105.481,243
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366201,7219532,31567,8,245,0.369619,5.31971e-05,120.778,245
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366270,7219532,49135,8,245,0.215145,4.0586e-05,126.19,245
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366271,7219532,52195,8,245,0.197162,3.88528e-05,127.063,246
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366277,7219532,49135,8,245,0.215145,4.0586e-05,126.19,245
-Hyman_ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366279,7219532,52195,8,245,0.197162,3.88528e-05,127.063,246
-Keller_Zebrafish_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365714,1256905570,1149876,8,224,3.4409,4.8891e-05,98.4679,241
-Keller_Zebrafish_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365780,1256905570,26230740,8,224,2.67569,4.31132e-05,100.983,233
-Keller_Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365860,1256905570,2819511,8,224,3.27428,4.76925e-05,98.9643,230
-Keller_Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365919,1256905570,2819511,8,224,3.27428,4.76925e-05,98.9643,230
-Keller_Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365947,1256905570,2701414,8,224,3.32985,4.80955e-05,98.796,240
-Keller_Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366016,1256905570,2701414,8,224,3.32985,4.80955e-05,98.796,240
+TM0829_Droso_PanNeural_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366123,91999365,840785,8,256,1.0096,4.45257e-05,110.73,256
+TM0829_Droso_PanNeural_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366124,91999365,144430,8,256,1.71847,5.80909e-05,105.411,256
+TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366202,91999365,995323,8,256,0.732316,3.79216e-05,113.941,256
+TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366203,91999365,995323,8,256,0.732316,3.79216e-05,113.941,256
+TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366216,91999365,1022638,8,256,0.753514,3.84665e-05,113.655,256
+TM0829_Droso_PanNeural_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366219,91999365,1022638,8,256,0.753514,3.84665e-05,113.655,256
+spim_TL50_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365558,396864832,4612714,8,256,10.23,9.83468e-05,87.572,256
+spim_TL50_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365825,396864832,43553804,8,256,5.59767,7.27488e-05,93.6018,256
+spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365854,396864832,1165130,8,256,11.3912,0.000103778,86.4969,256
+spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365891,396864832,1176066,8,256,11.6355,0.000104885,86.2847,256
+spim_TL50_Angle1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365907,396864832,1165130,8,256,11.3912,0.000103778,86.4969,256
+spim_TL50_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366017,396864832,1176066,8,256,11.6355,0.000104885,86.2847,256
+TM0066_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365869,116521467,1656961,8,256,10.7152,0.000136736,87.1086,256
+TM0066_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365992,116521467,11657181,8,256,6.23769,0.000104326,92.5192,256
+TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366106,116521467,1201842,8,256,10.8708,0.000137725,86.9645,256
+TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366115,116521467,1187058,8,256,10.7347,0.00013686,87.0904,256
+TM0066_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366139,116521467,1187058,8,256,10.7347,0.00013686,87.0904,256
+TM0066_Droso_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366147,116521467,1201842,8,256,10.8708,0.000137725,86.9645,256
+synthetic_blobs_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366049,100664882,1821655,8,256,12.4381,0.000152807,85.6176,256
+synthetic_blobs_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366061,100664882,17122837,8,256,5.51608,0.000101761,93.7486,256
+synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366158,100664882,2713548,8,256,11.216,0.000145106,86.6518,256
+synthetic_blobs_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366167,100664882,2713548,8,256,11.216,0.000145106,86.6518,256
+synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366192,100664882,2773885,8,256,11.3741,0.000146125,86.5118,256
+synthetic_blobs_noise_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366199,100664882,2773885,8,256,11.3741,0.000146125,86.5118,256
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366159,12442136,643013,8,195,3.00093,0.000166391,99.8361,183
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366164,12442136,10043,8,195,4.09104,0.000194276,96.7373,126
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366256,12442136,950687,8,195,2.50963,0.000152162,101.624,193
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366258,12442136,919802,8,195,2.49311,0.000151661,101.69,198
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366265,12442136,919802,8,195,2.49311,0.000151661,101.69,198
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366267,12442136,950687,8,195,2.50963,0.000152162,101.624,193
+spim_TL08_Angle1_Channel1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365593,328320622,1442319,8,256,8.36399,9.32428e-05,89.5859,256
+spim_TL08_Angle1_Channel1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365836,328320622,31400295,8,256,5.20659,7.35673e-05,94.326,256
+spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365876,328320622,928789,8,256,8.64512,9.47969e-05,89.2553,256
+spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365948,328320622,880224,8,256,8.80151,9.56504e-05,89.076,256
+spim_TL08_Angle1_Channel1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366075,328320622,928789,8,256,8.64512,9.47969e-05,89.2553,256
+spim_TL08_Angle1_Channel1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366079,328320622,880224,8,256,8.80151,9.56504e-05,89.076,256
+ky5346_3_SI_great37-1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366192,7219532,10257,8,245,1.70654,0.000114306,105.481,243
+ky5346_3_SI_great37-1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366201,7219532,31567,8,245,0.369619,5.31971e-05,120.778,245
+ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366270,7219532,49135,8,245,0.215145,4.0586e-05,126.19,245
+ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366271,7219532,52195,8,245,0.197162,3.88528e-05,127.063,246
+ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366277,7219532,49135,8,245,0.215145,4.0586e-05,126.19,245
+ky5346_3_SI_great37-1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366279,7219532,52195,8,245,0.197162,3.88528e-05,127.063,246
+Zebrafish_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365714,1256905570,1149876,8,224,3.4409,4.8891e-05,98.4679,241
+Zebrafish_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365780,1256905570,26230740,8,224,2.67569,4.31132e-05,100.983,233
+Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365860,1256905570,2819511,8,224,3.27428,4.76925e-05,98.9643,230
+Zebrafish_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365919,1256905570,2819511,8,224,3.27428,4.76925e-05,98.9643,230
+Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365947,1256905570,2701414,8,224,3.32985,4.80955e-05,98.796,240
+Zebrafish_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366016,1256905570,2701414,8,224,3.32985,4.80955e-05,98.796,240
 Volvis_arteries_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366136,25167410,73378,8,251,2.71389,0.000102962,100.841,256
 Volvis_arteries_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366156,25167410,241807,8,251,1.8515,8.50436e-05,104.665,256
 Volvis_arteries_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366242,25167410,1609279,8,251,1.25006,6.98789e-05,108.593,256
 Volvis_arteries_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366244,25167410,1512707,8,251,1.04089,6.3765e-05,110.424,255
 Volvis_arteries_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366245,25167410,1512707,8,251,1.04089,6.3765e-05,110.424,255
 Volvis_arteries_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366249,25167410,1609279,8,251,1.25006,6.98789e-05,108.593,256
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366170,12442136,643013,8,195,3.00093,0.000166391,99.8361,183
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366180,12442136,10043,8,195,4.09104,0.000194276,96.7373,126
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366258,12442136,950687,8,195,2.50963,0.000152162,101.624,193
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366260,12442136,950687,8,195,2.50963,0.000152162,101.624,193
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366263,12442136,919802,8,195,2.49311,0.000151661,101.69,198
-Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366264,12442136,919802,8,195,2.49311,0.000151661,101.69,198
-Keller_TM2497_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365923,116521467,20375046,8,256,7.36104,0.000113332,90.8633,256
-Keller_TM2497_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365987,116521467,4307284,8,256,15.2393,0.000163066,83.5865,256
-Keller_TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366090,116521467,1219705,8,256,16.5246,0.000169804,82.7767,256
-Keller_TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366114,116521467,1215497,8,256,16.8447,0.00017144,82.5849,256
-Keller_TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366139,116521467,1215497,8,256,16.8447,0.00017144,82.5849,256
-Keller_TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366147,116521467,1219705,8,256,16.5246,0.000169804,82.7767,256
-Keller_TM0829_Droso_PanNeural_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366119,91999365,15644108,8,256,6.13992,0.000109804,92.6772,256
-Keller_TM0829_Droso_PanNeural_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366123,91999365,3004245,8,256,13.8184,0.000164727,84.5653,256
-Keller_TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366208,91999365,1186047,8,256,14.5704,0.000169151,84.0353,256
-Keller_TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366211,91999365,1184110,8,256,14.7584,0.000170238,83.9072,256
-Keller_TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366212,91999365,1186047,8,256,14.5704,0.000169151,84.0353,256
-Keller_TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366220,91999365,1184110,8,256,14.7584,0.000170238,83.9072,256
-Hyman_ky5346_3_SI_great37-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366182,7219532,334193,8,256,2.85338,0.00014143,100.34,256
-Hyman_ky5346_3_SI_great37-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366198,7219532,18121,8,256,4.4437,0.000176495,95.9104,256
-Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366269,7219532,582929,8,256,2.1802,0.000123626,103.031,256
-Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366273,7219532,547449,8,256,2.12652,0.000122094,103.28,256
-Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366275,7219532,547449,8,256,2.12652,0.000122094,103.28,256
-Hyman_ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366275,7219532,582929,8,256,2.1802,0.000123626,103.031,256
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365610,574157920,15582058,8,255,2.7033,4.62784e-05,100.881,252
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365822,574157920,471897,8,255,3.33968,5.1438e-05,98.7665,248
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365902,574157920,1755834,8,255,3.24621,5.0713e-05,99.0504,256
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365935,574157920,1704153,8,255,3.20355,5.03788e-05,99.1827,256
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366002,574157920,1755834,8,255,3.24621,5.0713e-05,99.0504,256
-Tomancak_spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366032,574157920,1704153,8,255,3.20355,5.03788e-05,99.1827,256
-Huisken_vasculature_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366131,91238846,14312085,8,256,5.16384,0.000100908,94.4085,256
-Huisken_vasculature_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366132,91238846,1744201,8,256,11.7831,0.000152429,86.1586,256
-Huisken_vasculature_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366224,91238846,836755,8,256,11.7708,0.00015235,86.169,256
-Huisken_vasculature_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366227,91238846,836755,8,256,11.7708,0.00015235,86.169,256
-Huisken_vasculature_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366229,91238846,830852,8,256,11.9212,0.00015332,86.0421,256
-Huisken_vasculature_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366238,91238846,830852,8,256,11.9212,0.00015332,86.0421,256
-Myers_synthetic_filaments_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366064,100664882,1592808,8,256,12.0655,0.000150501,85.9217,256
-Myers_synthetic_filaments_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366072,100664882,16429497,8,256,5.41796,0.000100852,93.9281,256
-Myers_synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366166,100664882,2669850,8,256,10.7425,0.00014201,87.0832,256
-Myers_synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366175,100664882,2669850,8,256,10.7425,0.00014201,87.0832,256
-Myers_synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366183,100664882,2790416,8,256,10.8629,0.000142803,86.9717,256
-Myers_synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366184,100664882,2790416,8,256,10.8629,0.000142803,86.9717,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365847,116521467,1199822,8,256,6.55389,0.000106938,92.0247,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365994,116521467,5625654,8,256,3.22643,7.50314e-05,99.1115,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366081,116521467,1416356,8,256,6.29159,0.000104776,92.4331,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366095,116521467,1408534,8,256,6.28671,0.000104735,92.4409,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366098,116521467,1408534,8,256,6.28671,0.000104735,92.4409,256
-Keller_TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366107,116521467,1416356,8,256,6.29159,0.000104776,92.4331,256
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365623,396864832,25119064,8,249,4.67046,6.83267e-05,95.4127,251
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365805,396864832,903603,8,249,6.42881,8.01634e-05,92.2174,256
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365887,396864832,1255680,8,249,6.47128,8.04277e-05,92.1515,256
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365953,396864832,1255680,8,249,6.47128,8.04277e-05,92.1515,256
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365964,396864832,1272099,8,249,6.39638,7.99609e-05,92.268,254
-Tomancak_spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366002,396864832,1272099,8,249,6.39638,7.99609e-05,92.268,254
-Huisken_vasculature_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366127,91238846,14792362,8,256,5.5189,0.000104319,93.7435,256
-Huisken_vasculature_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366129,91238846,1960822,8,256,12.3959,0.000156343,85.6516,256
-Huisken_vasculature_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366227,91238846,824742,8,256,12.4851,0.000156904,85.5799,256
-Huisken_vasculature_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366233,91238846,811635,8,256,12.6508,0.000157942,85.4481,256
-Huisken_vasculature_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366235,91238846,824742,8,256,12.4851,0.000156904,85.5799,256
-Huisken_vasculature_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366236,91238846,811635,8,256,12.6508,0.000157942,85.4481,256
-Myers_synthetic_blobs_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366075,100664882,624140,8,256,5.15045,9.83303e-05,94.4344,255
-Myers_synthetic_blobs_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366116,100664882,3186144,8,256,1.78915,5.79547e-05,105.008,256
-Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366148,100664882,2578051,8,256,2.28717,6.5526e-05,102.552,256
-Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366182,100664882,2582868,8,256,2.17338,6.38753e-05,103.062,256
-Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366191,100664882,2582868,8,256,2.17338,6.38753e-05,103.062,256
-Myers_synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366194,100664882,2578051,8,256,2.28717,6.5526e-05,102.552,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365578,328320622,573517,8,256,6.4351,8.17873e-05,92.2076,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365843,328320622,20830696,8,256,4.66741,6.9654e-05,95.4192,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365871,328320622,985176,8,256,6.44592,8.1856e-05,92.1908,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365932,328320622,985176,8,256,6.44592,8.1856e-05,92.1908,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365976,328320622,947362,8,256,6.51873,8.2317e-05,92.0785,256
-Tomancak_spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365979,328320622,947362,8,256,6.51873,8.2317e-05,92.0785,256
-Tomancak_spim_TL05_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365635,574157920,8239035,8,256,11.4043,9.46803e-05,86.4854,256
-Tomancak_spim_TL05_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365700,574157920,76450429,8,256,5.64475,6.66112e-05,93.518,256
-Tomancak_spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365854,574157920,1745937,8,256,12.8637,0.000100556,85.2812,256
-Tomancak_spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365889,574157920,1736543,8,256,12.63,9.96383e-05,85.4645,256
-Tomancak_spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365969,574157920,1736543,8,256,12.63,9.96383e-05,85.4645,256
-Tomancak_spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365999,574157920,1745937,8,256,12.8637,0.000100556,85.2812,256
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366170,12442136,643013,8,195,3.00093,0.000166391,99.8361,183
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366180,12442136,10043,8,195,4.09104,0.000194276,96.7373,126
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366258,12442136,950687,8,195,2.50963,0.000152162,101.624,193
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366260,12442136,950687,8,195,2.50963,0.000152162,101.624,193
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366263,12442136,919802,8,195,2.49311,0.000151661,101.69,198
+HisGFP+BTub-GFP_12Oct2013_spec2_try1-1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366264,12442136,919802,8,195,2.49311,0.000151661,101.69,198
+TM2497_Droso_HisGFP_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365923,116521467,20375046,8,256,7.36104,0.000113332,90.8633,256
+TM2497_Droso_HisGFP_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365987,116521467,4307284,8,256,15.2393,0.000163066,83.5865,256
+TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366090,116521467,1219705,8,256,16.5246,0.000169804,82.7767,256
+TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366114,116521467,1215497,8,256,16.8447,0.00017144,82.5849,256
+TM2497_Droso_HisGFP_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366139,116521467,1215497,8,256,16.8447,0.00017144,82.5849,256
+TM2497_Droso_HisGFP_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366147,116521467,1219705,8,256,16.5246,0.000169804,82.7767,256
+TM0829_Droso_PanNeural_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366119,91999365,15644108,8,256,6.13992,0.000109804,92.6772,256
+TM0829_Droso_PanNeural_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366123,91999365,3004245,8,256,13.8184,0.000164727,84.5653,256
+TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366208,91999365,1186047,8,256,14.5704,0.000169151,84.0353,256
+TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366211,91999365,1184110,8,256,14.7584,0.000170238,83.9072,256
+TM0829_Droso_PanNeural_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366212,91999365,1186047,8,256,14.5704,0.000169151,84.0353,256
+TM0829_Droso_PanNeural_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366220,91999365,1184110,8,256,14.7584,0.000170238,83.9072,256
+ky5346_3_SI_great37-1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366182,7219532,334193,8,256,2.85338,0.00014143,100.34,256
+ky5346_3_SI_great37-1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366198,7219532,18121,8,256,4.4437,0.000176495,95.9104,256
+ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366269,7219532,582929,8,256,2.1802,0.000123626,103.031,256
+ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366273,7219532,547449,8,256,2.12652,0.000122094,103.28,256
+ky5346_3_SI_great37-1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366275,7219532,547449,8,256,2.12652,0.000122094,103.28,256
+ky5346_3_SI_great37-1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366275,7219532,582929,8,256,2.1802,0.000123626,103.031,256
+spim_TL05_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365610,574157920,15582058,8,255,2.7033,4.62784e-05,100.881,252
+spim_TL05_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365822,574157920,471897,8,255,3.33968,5.1438e-05,98.7665,248
+spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365902,574157920,1755834,8,255,3.24621,5.0713e-05,99.0504,256
+spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365935,574157920,1704153,8,255,3.20355,5.03788e-05,99.1827,256
+spim_TL05_Angle1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366002,574157920,1755834,8,255,3.24621,5.0713e-05,99.0504,256
+spim_TL05_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366032,574157920,1704153,8,255,3.20355,5.03788e-05,99.1827,256
+vasculature_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366131,91238846,14312085,8,256,5.16384,0.000100908,94.4085,256
+vasculature_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366132,91238846,1744201,8,256,11.7831,0.000152429,86.1586,256
+vasculature_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366224,91238846,836755,8,256,11.7708,0.00015235,86.169,256
+vasculature_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366227,91238846,836755,8,256,11.7708,0.00015235,86.169,256
+vasculature_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366229,91238846,830852,8,256,11.9212,0.00015332,86.0421,256
+vasculature_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366238,91238846,830852,8,256,11.9212,0.00015332,86.0421,256
+synthetic_filaments_noise_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366064,100664882,1592808,8,256,12.0655,0.000150501,85.9217,256
+synthetic_filaments_noise_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366072,100664882,16429497,8,256,5.41796,0.000100852,93.9281,256
+synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366166,100664882,2669850,8,256,10.7425,0.00014201,87.0832,256
+synthetic_filaments_noise_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366175,100664882,2669850,8,256,10.7425,0.00014201,87.0832,256
+synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366183,100664882,2790416,8,256,10.8629,0.000142803,86.9717,256
+synthetic_filaments_noise_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366184,100664882,2790416,8,256,10.8629,0.000142803,86.9717,256
+TM2497_Droso_HisGFP_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365847,116521467,1199822,8,256,6.55389,0.000106938,92.0247,256
+TM2497_Droso_HisGFP_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365994,116521467,5625654,8,256,3.22643,7.50314e-05,99.1115,256
+TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366081,116521467,1416356,8,256,6.29159,0.000104776,92.4331,256
+TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366095,116521467,1408534,8,256,6.28671,0.000104735,92.4409,256
+TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366098,116521467,1408534,8,256,6.28671,0.000104735,92.4409,256
+TM2497_Droso_HisGFP_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366107,116521467,1416356,8,256,6.29159,0.000104776,92.4331,256
+spim_TL50_Angle1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365623,396864832,25119064,8,249,4.67046,6.83267e-05,95.4127,251
+spim_TL50_Angle1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365805,396864832,903603,8,249,6.42881,8.01634e-05,92.2174,256
+spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365887,396864832,1255680,8,249,6.47128,8.04277e-05,92.1515,256
+spim_TL50_Angle1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365953,396864832,1255680,8,249,6.47128,8.04277e-05,92.1515,256
+spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365964,396864832,1272099,8,249,6.39638,7.99609e-05,92.268,254
+spim_TL50_Angle1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366002,396864832,1272099,8,249,6.39638,7.99609e-05,92.268,254
+vasculature_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366127,91238846,14792362,8,256,5.5189,0.000104319,93.7435,256
+vasculature_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366129,91238846,1960822,8,256,12.3959,0.000156343,85.6516,256
+vasculature_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366227,91238846,824742,8,256,12.4851,0.000156904,85.5799,256
+vasculature_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366233,91238846,811635,8,256,12.6508,0.000157942,85.4481,256
+vasculature_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366235,91238846,824742,8,256,12.4851,0.000156904,85.5799,256
+vasculature_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366236,91238846,811635,8,256,12.6508,0.000157942,85.4481,256
+synthetic_blobs_noise_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494366075,100664882,624140,8,256,5.15045,9.83303e-05,94.4344,255
+synthetic_blobs_noise_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494366116,100664882,3186144,8,256,1.78915,5.79547e-05,105.008,256
+synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366148,100664882,2578051,8,256,2.28717,6.5526e-05,102.552,256
+synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366182,100664882,2582868,8,256,2.17338,6.38753e-05,103.062,256
+synthetic_blobs_noise_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494366191,100664882,2582868,8,256,2.17338,6.38753e-05,103.062,256
+synthetic_blobs_noise_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494366194,100664882,2578051,8,256,2.28717,6.5526e-05,102.552,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365578,328320622,573517,8,256,6.4351,8.17873e-05,92.2076,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365843,328320622,20830696,8,256,4.66741,6.9654e-05,95.4192,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365871,328320622,985176,8,256,6.44592,8.1856e-05,92.1908,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365932,328320622,985176,8,256,6.44592,8.1856e-05,92.1908,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365976,328320622,947362,8,256,6.51873,8.2317e-05,92.0785,256
+spim_TL08_Angle1_Channel1_weighted_power_3_1,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365979,328320622,947362,8,256,6.51873,8.2317e-05,92.0785,256
+spim_TL05_Angle1_unweighted,libx265_ultrafast,"-c:v libx265 -x265-params pools=8,-",1494365635,574157920,8239035,8,256,11.4043,9.46803e-05,86.4854,256
+spim_TL05_Angle1_unweighted,libx264_ultrafast,"-c:v libx264 -preset ultrafast",1494365700,574157920,76450429,8,256,5.64475,6.66112e-05,93.518,256
+spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast_nvprof,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365854,574157920,1745937,8,256,12.8637,0.000100556,85.2812,256
+spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast_nvprof,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365889,574157920,1736543,8,256,12.63,9.96383e-05,85.4645,256
+spim_TL05_Angle1_unweighted,nvenc_hevc_ultrafast,"-c:v nvenc_hevc -preset llhp -2pass 0 -gpu 1",1494365969,574157920,1736543,8,256,12.63,9.96383e-05,85.4645,256
+spim_TL05_Angle1_unweighted,nvenc_h264_ultrafast,"-c:v nvenc_h264 -preset llhp -2pass 0 -gpu 0",1494365999,574157920,1745937,8,256,12.8637,0.000100556,85.2812,256
