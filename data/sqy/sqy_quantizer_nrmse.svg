@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 504.00 288.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<rect x='0.00' y='0.00' width='504.00' height='288.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<defs>
+  <clipPath id='cp1'>
+    <rect x='65.99' y='27.28' width='432.53' height='223.18' />
+  </clipPath>
+</defs>
+<rect x='65.99' y='27.28' width='432.53' height='223.18' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' clip-path='url(#cp1)' />
+<polyline points='65.99,218.01 498.52,218.01 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,170.91 498.52,170.91 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,123.81 498.52,123.81 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,76.72 498.52,76.72 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,29.62 498.52,29.62 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='105.42,250.46 105.42,27.28 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='207.20,250.46 207.20,27.28 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='308.99,250.46 308.99,27.28 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='410.78,250.46 410.78,27.28 ' style='stroke-width: 0.53; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,241.56 498.52,241.56 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,194.46 498.52,194.46 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,147.36 498.52,147.36 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,100.27 498.52,100.27 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='65.99,53.17 498.52,53.17 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='156.31,250.46 156.31,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='258.10,250.46 258.10,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='359.88,250.46 359.88,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<polyline points='461.67,250.46 461.67,27.28 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<circle cx='432.87' cy='238.55' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='240.92' cy='181.56' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='462.74' cy='166.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='417.26' cy='226.65' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='239.44' cy='222.89' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='187.50' cy='223.64' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='346.34' cy='208.76' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='116.92' cy='123.83' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='85.65' cy='170.62' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='223.21' cy='37.43' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='456.79' cy='240.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='457.98' cy='213.10' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='478.86' cy='240.14' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<circle cx='140.82' cy='126.32' r='4.62pt' style='stroke-width: 0.71; fill: #000000;' clip-path='url(#cp1)' />
+<line x1='293.63' y1='250.46' x2='293.63' y2='27.28' style='stroke-width: 4.27; stroke: #FF0000; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<g clip-path='url(#cp1)'><text transform='translate(290.72,98.67) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text transform='translate(306.62,147.39) rotate(-90)' style='font-size: 11.04pt; fill: #FF0000; font-family: Arial;'>median = 4349</text></g>
+<line x1='65.99' y1='210.93' x2='498.52' y2='210.93' style='stroke-width: 4.27; stroke: #0000FF; stroke-linecap: butt;' clip-path='url(#cp1)' />
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<g clip-path='url(#cp1)'><text x='290.49' y='208.03' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'></text></g>
+<g clip-path='url(#cp1)'><text x='235.65' y='223.92' style='font-size: 11.04pt; fill: #0000FF; font-family: Arial;'>median = 0.0003</text></g>
+<rect x='65.99' y='27.28' width='432.53' height='223.18' style='stroke-width: 1.07; stroke: #333333;' clip-path='url(#cp1)' />
+<defs>
+  <clipPath id='cp2'>
+    <rect x='0.00' y='0.00' width='504.00' height='288.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cp2)'><text x='24.35' y='245.69' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>0.0000</text></g>
+<g clip-path='url(#cp2)'><text x='24.35' y='198.59' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>0.0005</text></g>
+<g clip-path='url(#cp2)'><text x='24.35' y='151.49' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>0.0010</text></g>
+<g clip-path='url(#cp2)'><text x='24.35' y='104.39' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>0.0015</text></g>
+<g clip-path='url(#cp2)'><text x='24.35' y='57.29' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>0.0020</text></g>
+<polyline points='63.25,241.56 65.99,241.56 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='63.25,194.46 65.99,194.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='63.25,147.36 65.99,147.36 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='63.25,100.27 65.99,100.27 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='63.25,53.17 65.99,53.17 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='156.31,253.20 156.31,250.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='258.10,253.20 258.10,250.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='359.88,253.20 359.88,250.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<polyline points='461.67,253.20 461.67,250.46 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' clip-path='url(#cp2)' />
+<g clip-path='url(#cp2)'><text x='142.96' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>3000</text></g>
+<g clip-path='url(#cp2)'><text x='244.75' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>4000</text></g>
+<g clip-path='url(#cp2)'><text x='346.54' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>5000</text></g>
+<g clip-path='url(#cp2)'><text x='448.32' y='263.65' style='font-size: 8.80pt; fill: #4D4D4D; font-family: Arial;'>6000</text></g>
+<g clip-path='url(#cp2)'><text x='204.40' y='279.21' style='font-size: 11.00pt; font-family: Arial;'>ingest bandwidth / MB/s</text></g>
+<g clip-path='url(#cp2)'><text transform='translate(15.56,212.20) rotate(-90)' style='font-size: 11.00pt; font-family: Arial;'> RMS / (max(I)-min(I)) </text></g>
+<g clip-path='url(#cp2)'><text x='65.99' y='17.40' style='font-size: 13.20pt; font-family: Arial;'>sqeazy quantiser (8 threads of Intel E5-2680v3 CPU)</text></g>
+</svg>

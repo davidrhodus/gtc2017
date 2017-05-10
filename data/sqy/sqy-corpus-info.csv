@@ -1,0 +1,16 @@
+filename,bits_per_pixel,shape,min,max,mean,stddev,.25*quant,median,.75*quant
+Huisken_vasculature.tif,16,66x960x960,872,16554,979.7,205.6,941.5,953.5,967.5
+Hyman_ky5346_3_SI_great37-1.tif,16,47x320x320,0,848,5.912,16.44,1.5,2.477,4.359
+Keller_TM0066_Droso_HisGFP.tif,16,108x1352x532,0,885,50.76,72.26,5.49,14.47,79.5
+Keller_TM0829_Droso_PanNeural.tif,16,99x1280x484,0,5596,140.2,267.1,14.5,37.49,159.5
+Keller_TM2497_Droso_HisGFP.tif,16,108x1352x532,0,5081,89,115.9,13.5,32.49,143.5
+Keller_Zebrafish_HisGFP.tif,16,253x1800x1840,0,321,6.943,8.734,1.638,4.357,6.408
+Myers_HisGFP+BTub-GFP_12Oct2013_spec2_try1-1.tif,16,81x320x320,30,262,101.9,6.483,98.62,100.4,102.4
+Myers_synthetic_blobs_noise.tif,16,256x512x512,0,645,76.42,130.9,0,15.49,76.5
+Myers_synthetic_filaments_noise.tif,16,256x512x512,0,542,11.67,25.37,0,0.03735,14.49
+Svoboda_Colon_small.tif,16,65x515x650,81,527,126.7,58.58,91.53,94.39,141.5
+Tomancak_spim_TL05_Angle1.tif,16,178x1120x1920,130,51123,272.9,148.8,207.5,229.5,309.5
+Tomancak_spim_TL08_Angle1_Channel1.tif,16,95x1920x1200,140,2155,256.2,122.5,203.5,210.5,232.5
+Tomancak_spim_TL50_Angle1.tif,16,130x1060x1920,135,42228,241.9,84.17,201.5,208.5,249.5
+Volvis_arteries.tif,16,256x256x256,0,255,1.795,14.38,0,0,0.08781
+flybrain.tif,8,57x256x256,-128,127,12.19,26.87,0,0,0
