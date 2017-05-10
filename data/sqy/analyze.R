@@ -53,7 +53,7 @@ combined_enc = inner_join(gr_enc_df,qual_df,by = c("filename"="filename",
 glimpse(combined_enc)
 unique(combined_enc$pipeline)
 
-to_plot = combined_enc %>% filter("quantiser->lz4" %in% pipeline) %>% mutate( obfuscated_filename = paste("corpus-",row_number(),sep=""))
+to_plot = combined_enc %>% filter("quantiser" %in% pipeline) %>% mutate( obfuscated_filename = paste("corpus-",row_number(),sep=""))
 
 glimpse(to_plot)
 paste(unique(to_plot$filename))
