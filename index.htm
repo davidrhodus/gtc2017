@@ -293,9 +293,27 @@ mean +/- std = 11 +/- 3</li>
 </figure>
 </div>
 </div>
-</section><section id="hardware-accelerated-ffmpeg" class="slide level2">
-<h1>hardware accelerated ffmpeg</h1>
-<p>show OS support table, and why nvenc is a valid choice</p>
+</section><section id="hardware-accelerated-codecs" class="slide level2">
+<h1>hardware accelerated codecs</h1>
+<ul>
+<li>production systems: Windows (microscope) and Linux (HPC) based (macOS mostly for decoding)</li>
+</ul>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="img/ffmpeg_api_overview.png" alt="from ffmpeg wiki" style="width:100.0%" /><figcaption>from <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro#Platformsoverview">ffmpeg wiki</a></figcaption>
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li><p>rarely any single library supports hardware accelerated video encoding uniformly</p></li>
+<li><p>ffmpeg+nvenc meets our needs</p></li>
+<li><p>encapsulates external dependencies (easier comparison)</p></li>
+</ul>
+</div>
+</div>
 </section></section>
 <section><section id="results" class="titleslide slide level1"><h1>Results</h1></section><section id="benchmark-platform" class="slide level2">
 <h1>benchmark platform</h1>
@@ -332,9 +350,9 @@ mean +/- std = 11 +/- 3</li>
 <ul>
 <li><p>simple workflow based on ffmpeg performed on all:</p>
 <ol type="1">
-<li>quantize .tif images with sqeazy (produce <em>input.y4m</em>)</li>
-<li>encode .y4m video with ffmpeg (take time, input/output files in ramdisk)</li>
-<li>decode from encoded.y4m and obtain roundtrip.y4m</li>
+<li>quantize .tif images to YUV 4:2:0 with sqeazy (produce <em>input.y4m</em>)</li>
+<li>encode <em>input.y4m</em> video with ffmpeg (take time, input/output files in ramdisk)</li>
+<li>decode encoded.raw to obtain <em>roundtrip.y4m</em></li>
 <li>compare quality of <em>input.y4m</em> and <em>roundtrip.y4m</em></li>
 </ol></li>
 <li>all timings based on <em>/usr/bin/time</em> if not stated otherwise</li>
@@ -353,8 +371,8 @@ mean +/- std = 11 +/- 3</li>
 <div class="col-xs-4">
 <ul>
 <li>x264 is fast, but doesn't provide high compression</li>
-<li><p>x265 is not fast, but does provide high compression</p></li>
-<li><p>preset study ongoing with downstream analysis/processing</p></li>
+<li><p>x265 is slow, but does provide high compression</p></li>
+<li><p>codec preset study ongoing with downstream analysis/processing</p></li>
 </ul>
 <center style="font-size: 1.25em">
 <p><strong>GPUs to the rescue?</strong></p>
@@ -396,11 +414,28 @@ mean +/- std = 11 +/- 3</li>
 <li><em>here</em>: using nvprof based timing</li>
 <li><em>nvenc_h264</em> offers surprising compression ratios in comparison to <em>libx264</em></li>
 <li>libx264 median bandwidth: 353 MB/s</li>
-<li>nvenc_h264 median bandwidth: 46 MB/s</li>
+<li>nvenc_h264 median bandwidth: 46 MB/s (nvenc docs suggest 6420 MB/s)</li>
 </ul>
 <center style="font-size: 1.25em">
 <p><strong>GPU encoding not there yet.</strong></p>
 </center>
+</div>
+</section><section id="profiling-details" class="slide level2">
+<h1>Profiling details</h1>
+<pre><code>$ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y output.h264</code></pre>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="img/nvprof_nvenc_h264.png" style="width:90.0%" />
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li>to no surpise: <em>h264 encoding is bound by host-device transfers</em></li>
+<li>90% of runtime consumed by host-device transfers</li>
+</ul>
 </div>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="high-bandwidth-3d-image-compression" class="slide level2">

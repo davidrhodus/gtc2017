@@ -360,9 +360,34 @@ mean +/- std = 11 +/- 3
 
 [/columns]
 
-## hardware accelerated ffmpeg
+## hardware accelerated codecs
 
-show OS support table, and why nvenc is a valid choice
+- production systems: Windows (microscope) and Linux (HPC) based (macOS mostly for decoding)
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![from [ffmpeg wiki](https://trac.ffmpeg.org/wiki/HWAccelIntro#Platformsoverview)](img/ffmpeg_api_overview.png){width=100%}
+
+</center>
+
+[/column]
+
+[column,class="col-xs-4"]
+
+- rarely any single library supports hardware accelerated video encoding uniformly
+
+- ffmpeg+nvenc meets our needs
+
+- encapsulates external dependencies (easier comparison)
+
+[/column]
+
+[/columns]
+
 
 # Results
 
