@@ -407,16 +407,16 @@ show OS support table, and why nvenc is a valid choice
 
 - simple workflow based on ffmpeg performed on all:  
 
-  	1. quantize .tif images with sqeazy (produce *input.y4m*)
-  	2. encode .y4m video with ffmpeg (take time, input/output files in ramdisk)
-  	3. decode from encoded.y4m and obtain roundtrip.y4m
+  	1. quantize .tif images to YUV 4:2:0 with sqeazy (produce *input.y4m*)
+  	2. encode *input.y4m* video with ffmpeg (take time, input/output files in ramdisk)
+  	3. decode encoded.raw to obtain _roundtrip.y4m_
   	4. compare quality of *input.y4m* and _roundtrip.y4m_
   
 - all timings based on _/usr/bin/time_ if not stated otherwise
 - orchestration on our HPC infrastructure with [snakemake](https://snakemake.readthedocs.io/en/stable/)
 
-## CPU only
 
+## CPU only
 
 [columns,class="row vertical-align"]
 
@@ -435,9 +435,9 @@ show OS support table, and why nvenc is a valid choice
 
 
 - x264 is fast, but doesn't provide high compression
-- x265 is not fast, but does provide high compression
+- x265 is slow, but does provide high compression
 
-- preset study ongoing with downstream analysis/processing
+- codec preset study ongoing with downstream analysis/processing
 
 <center style="font-size: 1.25em">
 
@@ -501,7 +501,8 @@ ffmpeg induces quite some overhead on top of nvenc?
 - *here*: using nvprof based timing
 - _nvenc_h264_ offers surprising compression ratios in comparison to _libx264_
 - libx264 median bandwidth: 353 MB/s
-- nvenc_h264 median bandwidth: 46 MB/s
+- nvenc_h264 median bandwidth: 46 MB/s 
+(nvenc docs suggest 6420 MB/s)
 
 <center style="font-size: 1.25em">
 
@@ -510,6 +511,31 @@ ffmpeg induces quite some overhead on top of nvenc?
 </center>
 [/column]
 
+## Profiling details
+
+```
+$ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y output.h264
+```
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![](img/nvprof_nvenc_h264.png){ width=90% }
+
+</center>
+
+
+[/column]
+
+[column,class="col-xs-4"]
+
+- to no surpise: *h264 encoding is bound by host-device transfers*
+- 90% of runtime consumed by host-device transfers
+
+[/column]
 
 # Summary
 
