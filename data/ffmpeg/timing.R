@@ -21,6 +21,7 @@ timingplot = ggplot( combined_enc ,aes( x=shortuid, y=time_ratio,color=encoder))
 timingplot = timingplot + geom_point(size=4) 
 timingplot = timingplot + ggtitle("ffmpeg (1 Nvidia GeForce GTX1080 per process)\nflags:  -c:v nvenc_<encoder> -preset llhp -2pass 0")
 timingplot = timingplot + xlab("file id") + ylab(" time(/usr/bin/time ffmpeg) / time(nvprof ffmpeg) ")
+timingplot = timingplot + ylim(0,1.1*max(combined_enc$time_ratio))
 timingplot = timingplot + coord_flip()
 
 
