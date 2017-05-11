@@ -1,7 +1,7 @@
 ---
 title: high-bandwidth 3D image compression to boost predictive life sciences
-author: Peter Steinbach
-origin: Scionics Computer Innovation GmbH
+author: Peter Steinbach, Jeffrey Kelling (presenter)
+origin: Scionics Computer Innovation GmbH, Helmholz-Zentrum Dresden Rossendorf
 email: steinbach@scionics.de
 date: May 11, 2017
 ---
@@ -58,6 +58,8 @@ date: May 11, 2017
     - scientific computing facility
     - IT infrastructure
     - public relations
+
+- member of the [GPU Center of Excelence](gcoe-dresden.de) (community of industrial and academic developers/scientists using GPUs)
 
 [/column]
 
@@ -198,7 +200,7 @@ date: May 11, 2017
 
 </center>
 
-## <span style="color: white; background-color: gray;">Does that scale?</span> {data-background="img/ieee_data_deluge.jpg"}
+## <span style="color: white; background-color: #002b36;">Does that scale?</span> {data-background="img/ieee_data_deluge.jpg"}
 
 
 # [Sqeazy](https://github.com/sqeazy/sqeazy)
@@ -459,7 +461,6 @@ mean +/- std = 11 +/- 3
 
 [column,class="col-xs-4"]
 
-
 - x264 is fast, but doesn't provide high compression
 - x265 is slow, but does provide high compression
 
@@ -477,11 +478,13 @@ mean +/- std = 11 +/- 3
 [/columns]
 
 
-## challenging measurements 
+## time measurements ?
 
 - running nvenc in ffmpeg observed with  
-`nvprof --print-api-trace ffmpeg ...`
-- cuCtxCreate/cuCtxDestroy based time delta from api trace
+
+```
+nvprof --print-api-trace ffmpeg ...
+```
 
 [columns,class="row vertical-align"]
 
@@ -498,11 +501,11 @@ mean +/- std = 11 +/- 3
 
 [column,class="col-xs-4"]
 
-<center>
+- cuCtxCreate/cuCtxDestroy based time delta from api trace
 
-ffmpeg induces quite some overhead on top of nvenc?
+- nvenc codec consumes 30-50% of the ffmpeg process time only
 
-</center>
+- ffmpeg induces quite some overhead on top of nvenc!
 
 [/column]
 
@@ -524,10 +527,10 @@ ffmpeg induces quite some overhead on top of nvenc?
 
 [column,class="col-xs-4"]
 
-- *here*: using nvprof based timing
-- _nvenc_h264_ offers surprising compression ratios in comparison to _libx264_ (preset definitions differ)
-- bandwidths are surprisingly low
-(nvenc docs suggest 6420 MB/s for h264 in this setting)
+- here:   
+*cuCtxCreate/Destroy based timing*
+- _nvenc_ offers improved compression ratios in comparison to _libx26{4,5}_ (preset definitions differ)
+- nvenc bandwidths are surprisingly low
 
 [/column]
 
@@ -543,7 +546,7 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 
 <center>
 
-![](img/nvprof_nvenc_h264.png){ width=90% }
+![](img/nvprof_nvenc_h264.png){ width=100% }
 
 </center>
 
@@ -552,8 +555,39 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 
 [column,class="col-xs-4"]
 
-- to no surpise: *h264 encoding is bound by host-device transfers*
+- to no surpise: *nvenc h264 encoding is bound by host-device transfers*
 - 90% of runtime consumed by host-device transfers
+
+<center>
+**Can it still be that slow?**
+</center>
+
+[/column]
+
+## GPU enhanced encoding (cont.)
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+
+![](data/ffmpeg/ffmpeg_cpugpu_video_codecs_sdk.svg){ width=90% }
+
+</center>
+
+
+[/column]
+
+[column,class="col-xs-4"]
+
+- here:   
+*timing from Nvidia Video SDK NvEncodeLowLatency*
+- _nvenc_ superior to _libx26{4,5}_ 
+- NvEncodeLowLatency timings:
+
+    + after/before driver initialisation 
+    + after/before memory initialisation 
 
 [/column]
 
@@ -562,29 +596,36 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 ## high-bandwidth 3D image compression
 
 - tough business given modern CMOS cameras (around 1GB/s at 16bit greyscale)
-- today: 
-	- many codecs out there 
-	- many bit ranges coming about (8,10,12 bits)
-	
-- multi-core implementations very competitive 
+
+- multi-core implementations very competitive   
   (either in compression ratio or speed)
   
-- nvenc through ffmpeg difficult to use/measure
+     + many codecs available
+     
+     + manu configuration parameters
+     
+     + many bit ranges coming about (8,10,12 bits)
+  
 
-## Thank you for your attention!
+## GPUs for 3D image compression?
+
+- nvenc through ffmpeg difficult to use/measure   
+(memory traffic, implementation quality poor?)
+
+- raw nvenc API suitable for high-bandwidth compression
+
+    + NvEncodeLowLatency timings ignores driver and memory initialisation  
+    (represents scenario of constant operation)
+    
+    + nvenc API useful on the microscope only, i.e. in streaming mode  
+    (at best if sqeazy pipeline in on the device too)
+
+    + PCIe bus apparently a bottleneck
+    
+
+## Thank you!
 
 [columns,class="row vertical-align"]
-
-[column,class="col-xs-8"]
-
-<center>
-![](img/opensource-550x475.png)  
-
-**[github.com/psteinb/gtc2017](https://github.com/psteinb/gtc2017)**
-</center>
-
-[/column]
-
 
 [column,class="col-xs-4"]
 
@@ -596,5 +637,16 @@ For questions, concerns or suggestions:
 </center>
 
 [/column]
+
+[column,class="col-xs-8"]
+
+<center>
+![](img/opensource-550x475.png)  
+
+**[github.com/psteinb/gtc2017](https://github.com/psteinb/gtc2017)**
+</center>
+
+[/column]
+
 
 [/columns]

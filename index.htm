@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
-        <meta name="author" content="Peter Steinbach" />
+        <meta name="author" content="Peter Steinbach, Jeffrey Kelling (presenter)" />
             <meta name="dcterms.date" content="2017-05-11" />
         <title>high-bandwidth 3D image compression to boost predictive life sciences</title>
     <meta name="description" content="high-bandwidth 3D image compression to boost predictive life sciences">
@@ -39,8 +39,8 @@
 		<section>
 	  <h1 class="title">high-bandwidth 3D image compression to boost predictive life sciences</h1>
 	  	  <p>
-	    <b>Peter Steinbach</b><br>
-	    <emph>(Scionics Computer Innovation GmbH)</emph><br>
+	    <b>Peter Steinbach, Jeffrey Kelling (presenter)</b><br>
+	    <emph>(Scionics Computer Innovation GmbH, Helmholz-Zentrum Dresden Rossendorf)</emph><br>
 	    <a href="mailto:steinbach@scionics.de">steinbach@scionics.de</a>
 	    <br><br>
 	  </p>
@@ -84,6 +84,7 @@
 <li>IT infrastructure</li>
 <li>public relations</li>
 </ul></li>
+<li><p>member of the <a href="gcoe-dresden.de">GPU Center of Excelence</a> (community of industrial and academic developers/scientists using GPUs)</p></li>
 </ul>
 </div>
 </div>
@@ -181,7 +182,7 @@ Movie does not work! Sorry!
 </figure>
 </center>
 </section><section id="does-that-scale" class="slide level2" data-background="img/ieee_data_deluge.jpg">
-<h1><span style="color: white; background-color: gray;">Does that scale?</span></h1>
+<h1><span style="color: white; background-color: #002b36;">Does that scale?</span></h1>
 </section></section>
 <section><section id="sqeazy" class="titleslide slide level1"><h1><a href="https://github.com/sqeazy/sqeazy">Sqeazy</a></h1></section><section id="open-source-compression-library" class="slide level2">
 <h1><a href="https://github.com/sqeazy/sqeazy" target="_blank">Open-source Compression Library</a></h1>
@@ -380,13 +381,12 @@ mean +/- std = 11 +/- 3</li>
 </center>
 </div>
 </div>
-</section><section id="challenging-measurements" class="slide level2">
-<h1>challenging measurements</h1>
+</section><section id="time-measurements" class="slide level2">
+<h1>time measurements ?</h1>
 <ul>
-<li>running nvenc in ffmpeg observed with<br />
-<code>nvprof --print-api-trace ffmpeg ...</code></li>
-<li>cuCtxCreate/cuCtxDestroy based time delta from api trace</li>
+<li>running nvenc in ffmpeg observed with</li>
 </ul>
+<pre><code>nvprof --print-api-trace ffmpeg ...</code></pre>
 <div class="row vertical-align">
 <div class="col-xs-8">
 <center>
@@ -396,9 +396,11 @@ mean +/- std = 11 +/- 3</li>
 </center>
 </div>
 <div class="col-xs-4">
-<center>
-<p>ffmpeg induces quite some overhead on top of nvenc?</p>
-</center>
+<ul>
+<li><p>cuCtxCreate/cuCtxDestroy based time delta from api trace</p></li>
+<li><p>nvenc codec consumes 30-50% of the ffmpeg process time only</p></li>
+<li><p>ffmpeg induces quite some overhead on top of nvenc!</p></li>
+</ul>
 </div>
 </section><section id="gpu-enhanced-encoding" class="slide level2">
 <h1>GPU enhanced encoding</h1>
@@ -412,9 +414,10 @@ mean +/- std = 11 +/- 3</li>
 </div>
 <div class="col-xs-4">
 <ul>
-<li><em>here</em>: using nvprof based timing</li>
-<li><em>nvenc_h264</em> offers surprising compression ratios in comparison to <em>libx264</em> (preset definitions differ)</li>
-<li>bandwidths are surprisingly low (nvenc docs suggest 6420 MB/s for h264 in this setting)</li>
+<li>here:<br />
+<em>cuCtxCreate/Destroy based timing</em></li>
+<li><em>nvenc</em> offers improved compression ratios in comparison to <em>libx26{4,5}</em> (preset definitions differ)</li>
+<li>nvenc bandwidths are surprisingly low</li>
 </ul>
 </div>
 </section><section id="profiling-details" class="slide level2">
@@ -424,44 +427,83 @@ mean +/- std = 11 +/- 3</li>
 <div class="col-xs-8">
 <center>
 <figure>
-<img src="img/nvprof_nvenc_h264.png" style="width:90.0%" />
+<img src="img/nvprof_nvenc_h264.png" style="width:100.0%" />
 </figure>
 </center>
 </div>
 <div class="col-xs-4">
 <ul>
-<li>to no surpise: <em>h264 encoding is bound by host-device transfers</em></li>
+<li>to no surpise: <em>nvenc h264 encoding is bound by host-device transfers</em></li>
 <li>90% of runtime consumed by host-device transfers</li>
+</ul>
+<center>
+<strong>Can it still be that slow?</strong>
+</center>
+</div>
+</section><section id="gpu-enhanced-encoding-cont." class="slide level2">
+<h1>GPU enhanced encoding (cont.)</h1>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<figure>
+<img src="data/ffmpeg/ffmpeg_cpugpu_video_codecs_sdk.svg" style="width:90.0%" />
+</figure>
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li>here:<br />
+<em>timing from Nvidia Video SDK NvEncodeLowLatency</em></li>
+<li><em>nvenc</em> superior to <em>libx26{4,5}</em></li>
+<li><p>NvEncodeLowLatency timings:</p>
+<ul>
+<li>after/before driver initialisation</li>
+<li>after/before memory initialisation</li>
+</ul></li>
 </ul>
 </div>
 </section></section>
 <section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="high-bandwidth-3d-image-compression" class="slide level2">
 <h1>high-bandwidth 3D image compression</h1>
 <ul>
-<li>tough business given modern CMOS cameras (around 1GB/s at 16bit greyscale)</li>
-<li>today:
+<li><p>tough business given modern CMOS cameras (around 1GB/s at 16bit greyscale)</p></li>
+<li><p>multi-core implementations very competitive<br />
+(either in compression ratio or speed)</p>
 <ul>
-<li>many codecs out there</li>
-<li>many bit ranges coming about (8,10,12 bits)</li>
+<li><p>many codecs available</p></li>
+<li><p>manu configuration parameters</p></li>
+<li><p>many bit ranges coming about (8,10,12 bits)</p></li>
 </ul></li>
-<li><p>multi-core implementations very competitive (either in compression ratio or speed)</p></li>
-<li><p>nvenc through ffmpeg difficult to use/measure</p></li>
 </ul>
-</section><section id="thank-you-for-your-attention" class="slide level2">
-<h1>Thank you for your attention!</h1>
+</section><section id="gpus-for-3d-image-compression" class="slide level2">
+<h1>GPUs for 3D image compression?</h1>
+<ul>
+<li><p>nvenc through ffmpeg difficult to use/measure<br />
+(memory traffic, implementation quality poor?)</p></li>
+<li><p>raw nvenc API suitable for high-bandwidth compression</p>
+<ul>
+<li><p>NvEncodeLowLatency timings ignores driver and memory initialisation<br />
+(represents scenario of constant operation)</p></li>
+<li><p>nvenc API useful on the microscope only, i.e. in streaming mode<br />
+(at best if sqeazy pipeline in on the device too)</p></li>
+<li><p>PCIe bus apparently a bottleneck</p></li>
+</ul></li>
+</ul>
+</section><section id="thank-you" class="slide level2">
+<h1>Thank you!</h1>
 <div class="row vertical-align">
+<div class="col-xs-4">
+<center style="font-size: 1.25em">
+<p>For questions, concerns or suggestions:</p>
+<p><a href="https://github.com/psteinb/gtc2017/issues">Open an issue!</a></p>
+</center>
+</div>
 <div class="col-xs-8">
 <center>
 <figure>
 <img src="img/opensource-550x475.png" />
 </figure>
 <strong><a href="https://github.com/psteinb/gtc2017">github.com/psteinb/gtc2017</a></strong>
-</center>
-</div>
-<div class="col-xs-4">
-<center style="font-size: 1.25em">
-<p>For questions, concerns or suggestions:</p>
-<p><a href="https://github.com/psteinb/gtc2017/issues">Open an issue!</a></p>
 </center>
 </div>
 </div>
