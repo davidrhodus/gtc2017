@@ -59,7 +59,7 @@ date: May 11, 2017
     - IT infrastructure
     - public relations
 
-- member of the [GPU Center of Excelence](gcoe-dresden.de) (community of industrial and academic developers/scientists using GPUs)
+- member of the [GPU Center of Excellence](gcoe-dresden.de) (community of industrial and academic developers/scientists using GPUs)
 
 [/column]
 
