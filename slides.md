@@ -118,7 +118,7 @@ date: May 11, 2017
 
 <center>
 
-![Selective Plane Illumination Microscopy](img/1280px-Spim_prinziple_en.svg.png)
+![Selective Plane Illumination Microscopy](img/1280px-Spim_prinziple_en.gray.png)
 
 </center>
 
@@ -198,7 +198,7 @@ date: May 11, 2017
 
 </center>
 
-## <span style="color:black">Does that scale?</span> {data-background="img/ieee_data_deluge.jpg"}
+## <span style="color: white; background-color: gray;">Does that scale?</span> {data-background="img/ieee_data_deluge.jpg"}
 
 
 # [Sqeazy](https://github.com/sqeazy/sqeazy)
