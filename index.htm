@@ -163,7 +163,7 @@ Movie does not work! Sorry!
 <ul>
 <li><p><em>today</em>:</p>
 <ul>
-<li>each CMOS camera can record 850 MB/s of 16bit grayscale</li>
+<li>each CMOS camera can record 850 MB/s of 16bit grayscale pixels</li>
 <li>2 cameras per scope, 1.7 GB/s</li>
 </ul></li>
 <li><p>scientists would like to capture long timelapses <em>1-2 days</em> (or more)</p></li>
@@ -267,8 +267,10 @@ mean +/- std = 11 +/- 3</li>
 </div>
 <div class="col-xs-4">
 <ul>
-<li>lossy bucket based quantisation (16 -&gt; 8 bits per pixel)</li>
+<li>lossy bucket based quantisation<br />
+(16 -&gt; 8 bits per pixel transformation)</li>
 <li>quality loss minimal</li>
+<li>8-bit per channel encoding is the standard input for video codecs</li>
 <li>bandwidth enough to take 8 cameras</li>
 </ul>
 </div>
@@ -285,7 +287,7 @@ mean +/- std = 11 +/- 3</li>
 <li><p>Linux, macOS, Windows supported</p></li>
 </ul></li>
 <li><p>steep learning curve for using libavcodec API</p></li>
-<li><p>currently: ffmpeg 3.0.7</p></li>
+<li><p>for this talk: ffmpeg 3.0.7</p></li>
 </ul>
 </div>
 <div class="col-xs-4">
@@ -297,7 +299,7 @@ mean +/- std = 11 +/- 3</li>
 </section><section id="hardware-accelerated-codecs" class="slide level2">
 <h1>hardware accelerated codecs</h1>
 <ul>
-<li>production systems: Windows (microscope) and Linux (HPC) based (macOS mostly for decoding)</li>
+<li>our production environment: Windows (microscope) and Linux (HPC) based</li>
 </ul>
 <div class="row vertical-align">
 <div class="col-xs-8">
@@ -309,8 +311,8 @@ mean +/- std = 11 +/- 3</li>
 </div>
 <div class="col-xs-4">
 <ul>
-<li><p>rarely any single library supports hardware accelerated video encoding uniformly</p></li>
-<li><p>ffmpeg+nvenc meets our needs</p></li>
+<li><p>rarely any single library supports hardware accelerated video encoding uniformly across platforms</p></li>
+<li><p>ffmpeg+nvenc meets our production requirements</p></li>
 <li><p>encapsulates external dependencies (easier comparison)</p></li>
 </ul>
 </div>
@@ -328,7 +330,7 @@ mean +/- std = 11 +/- 3</li>
 <li>128GB DDR4 RAM</li>
 <li>2x <a href="https://en.wikipedia.org/wiki/GeForce_10_series">Nvidia GeForce GTX1080</a></li>
 <li>CentOS 7.1</li>
-<li>host CPU limited to 8 threads to be close to production environment</li>
+<li>host CPU limited to 8 threads (production environment)</li>
 </ul>
 </div>
 <div class="col-xs-6">
@@ -340,7 +342,7 @@ mean +/- std = 11 +/- 3</li>
 <li><a href="http://git.videolan.org/git/x264.git">x264</a> (commit 90a61ec764)</li>
 <li><a href="https://bitbucket.org/multicoreware/x265/wiki/Home">x265</a> 2.4</li>
 <li><a href="https://gcc.gnu.org/">GNU gcc</a> 6.3 (5.4 when CUDA is required)</li>
-<li><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Media SDK</a> v7.1</li>
+<li><a href="https://developer.nvidia.com/nvidia-video-codec-sdk">Nvidia Media SDK</a> v7.1.9</li>
 <li>Nvidia driver 375.26</li>
 <li>CUDA 8.0.61</li>
 <li><a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a> 3.11.2 to orchestrate benchmarks</li>
@@ -357,8 +359,11 @@ mean +/- std = 11 +/- 3</li>
 <li>decode encoded.raw to obtain <em>roundtrip.y4m</em></li>
 <li>compare quality of <em>input.y4m</em> and <em>roundtrip.y4m</em></li>
 </ol></li>
+</ul>
+<p><br></p>
+<ul>
 <li>all timings based on <em>/usr/bin/time</em> if not stated otherwise</li>
-<li><p>orchestration on our HPC infrastructure with <a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a></p></li>
+<li>orchestration on our HPC infrastructure with <a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a></li>
 </ul>
 </section><section id="cpu-only" class="slide level2">
 <h1>CPU only</h1>
@@ -381,12 +386,10 @@ mean +/- std = 11 +/- 3</li>
 </center>
 </div>
 </div>
-</section><section id="time-measurements" class="slide level2">
-<h1>time measurements ?</h1>
-<ul>
-<li>running nvenc in ffmpeg observed with</li>
-</ul>
-<pre><code>nvprof --print-api-trace ffmpeg ...</code></pre>
+</section><section id="compare-timings" class="slide level2">
+<h1>compare timings</h1>
+<pre><code>$ time ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 ...
+$ nvprof --print-api-trace ffmpeg -i input.y4m -c:v nvenc_h264   ...</code></pre>
 <div class="row vertical-align">
 <div class="col-xs-8">
 <center>
@@ -397,7 +400,7 @@ mean +/- std = 11 +/- 3</li>
 </div>
 <div class="col-xs-4">
 <ul>
-<li><p>cuCtxCreate/cuCtxDestroy based time delta from api trace</p></li>
+<li><p>nvprof api trace: time delta from cuCtxCreate/cuCtxDestroy</p></li>
 <li><p>nvenc codec consumes 30-50% of the ffmpeg process time only</p></li>
 <li><p>ffmpeg induces quite some overhead on top of nvenc!</p></li>
 </ul>
@@ -433,8 +436,7 @@ mean +/- std = 11 +/- 3</li>
 </div>
 <div class="col-xs-4">
 <ul>
-<li>to no surpise: <em>nvenc h264 encoding is bound by host-device transfers</em></li>
-<li>90% of runtime consumed by host-device transfers</li>
+<li>to no surpise: <em>nvenc encoding is bound by host-device transfers</em> (90%)</li>
 </ul>
 <center>
 <strong>Can it still be that slow?</strong>
@@ -457,8 +459,8 @@ mean +/- std = 11 +/- 3</li>
 <li><em>nvenc</em> superior to <em>libx26{4,5}</em></li>
 <li><p>NvEncodeLowLatency timings:</p>
 <ul>
-<li>after/before driver initialisation</li>
-<li>after/before memory initialisation</li>
+<li>exclude driver initialisation</li>
+<li>exclude memory initialisation</li>
 </ul></li>
 </ul>
 </div>
@@ -483,9 +485,9 @@ mean +/- std = 11 +/- 3</li>
 <li><p>raw nvenc API suitable for high-bandwidth compression</p>
 <ul>
 <li><p>NvEncodeLowLatency timings ignores driver and memory initialisation<br />
-(represents scenario of constant operation)</p></li>
+(represents scenario of constant streaming/encoding)</p></li>
 <li><p>nvenc API useful on the microscope only, i.e. in streaming mode<br />
-(at best if sqeazy pipeline in on the device too)</p></li>
+(at best if compression pipeline is on the device as well)</p></li>
 <li><p>PCIe bus apparently a bottleneck</p></li>
 </ul></li>
 </ul>
@@ -495,7 +497,7 @@ mean +/- std = 11 +/- 3</li>
 <div class="col-xs-4">
 <center style="font-size: 1.25em">
 <p>For questions, concerns or suggestions:</p>
-<p><a href="https://github.com/psteinb/gtc2017/issues">Open an issue!</a></p>
+<p><a href="https://github.com/psteinb/gtc2017/issues">Open an issue, please!</a></p>
 </center>
 </div>
 <div class="col-xs-8">

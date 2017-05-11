@@ -174,7 +174,7 @@ date: May 11, 2017
 
 - *today*:
 
-	+ each CMOS camera can record 850 MB/s of 16bit grayscale 
+	+ each CMOS camera can record 850 MB/s of 16bit grayscale pixels
 	+ 2 cameras per scope, 1.7 GB/s
 
 - scientists would like to capture long timelapses *1-2 days* (or more)
@@ -326,8 +326,10 @@ mean +/- std = 11 +/- 3
 
 [column,class="col-xs-4"]
 
-- lossy bucket based quantisation (16 -> 8 bits per pixel)
+- lossy bucket based quantisation  
+(16 -> 8 bits per pixel transformation)
 - quality loss minimal
+- 8-bit per channel encoding is the standard input for video codecs
 - bandwidth enough to take 8 cameras
 
 [/column]
@@ -350,7 +352,7 @@ mean +/- std = 11 +/- 3
 
 - steep learning curve for using libavcodec API
 
-- currently: ffmpeg 3.0.7
+- for this talk: ffmpeg 3.0.7
 
 [/column]
 
@@ -364,7 +366,7 @@ mean +/- std = 11 +/- 3
 
 ## hardware accelerated codecs
 
-- production systems: Windows (microscope) and Linux (HPC) based (macOS mostly for decoding)
+- our production environment: Windows (microscope) and Linux (HPC) based
 
 [columns,class="row vertical-align"]
 
@@ -380,9 +382,9 @@ mean +/- std = 11 +/- 3
 
 [column,class="col-xs-4"]
 
-- rarely any single library supports hardware accelerated video encoding uniformly
+- rarely any single library supports hardware accelerated video encoding uniformly across platforms
 
-- ffmpeg+nvenc meets our needs
+- ffmpeg+nvenc meets our production requirements
 
 - encapsulates external dependencies (easier comparison)
 
@@ -407,7 +409,7 @@ mean +/- std = 11 +/- 3
 - 128GB DDR4 RAM
 - 2x [Nvidia GeForce GTX1080](https://en.wikipedia.org/wiki/GeForce_10_series)
 - CentOS 7.1
-- host CPU limited to 8 threads to be close to production environment
+- host CPU limited to 8 threads (production environment)
 
 [/column]
 
@@ -422,7 +424,7 @@ mean +/- std = 11 +/- 3
 - [x264]( http://git.videolan.org/git/x264.git ) (commit 90a61ec764)
 - [x265]( https://bitbucket.org/multicoreware/x265/wiki/Home ) 2.4
 - [GNU gcc](https://gcc.gnu.org/) 6.3 (5.4 when CUDA is required)
-- [Nvidia Media SDK](https://developer.nvidia.com/nvidia-video-codec-sdk) v7.1
+- [Nvidia Media SDK](https://developer.nvidia.com/nvidia-video-codec-sdk) v7.1.9
 - Nvidia driver 375.26
 - CUDA 8.0.61
 - [snakemake](https://snakemake.readthedocs.io/en/stable/) 3.11.2 to orchestrate benchmarks
@@ -439,6 +441,10 @@ mean +/- std = 11 +/- 3
   	2. encode *input.y4m* video with ffmpeg (take time, input/output files in ramdisk)
   	3. decode encoded.raw to obtain _roundtrip.y4m_
   	4. compare quality of *input.y4m* and _roundtrip.y4m_
+  
+  
+<br>
+  
   
 - all timings based on _/usr/bin/time_ if not stated otherwise
 - orchestration on our HPC infrastructure with [snakemake](https://snakemake.readthedocs.io/en/stable/)
@@ -478,12 +484,11 @@ mean +/- std = 11 +/- 3
 [/columns]
 
 
-## time measurements ?
-
-- running nvenc in ffmpeg observed with  
+## compare timings
 
 ```
-nvprof --print-api-trace ffmpeg ...
+$ time ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 ...
+$ nvprof --print-api-trace ffmpeg -i input.y4m -c:v nvenc_h264   ...
 ```
 
 [columns,class="row vertical-align"]
@@ -501,7 +506,7 @@ nvprof --print-api-trace ffmpeg ...
 
 [column,class="col-xs-4"]
 
-- cuCtxCreate/cuCtxDestroy based time delta from api trace
+- nvprof api trace: time delta from cuCtxCreate/cuCtxDestroy 
 
 - nvenc codec consumes 30-50% of the ffmpeg process time only
 
@@ -555,8 +560,7 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 
 [column,class="col-xs-4"]
 
-- to no surpise: *nvenc h264 encoding is bound by host-device transfers*
-- 90% of runtime consumed by host-device transfers
+- to no surpise: *nvenc encoding is bound by host-device transfers* (90%)
 
 <center>
 **Can it still be that slow?**
@@ -586,8 +590,8 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 - _nvenc_ superior to _libx26{4,5}_ 
 - NvEncodeLowLatency timings:
 
-    + after/before driver initialisation 
-    + after/before memory initialisation 
+    + exclude driver initialisation 
+    + exclude memory initialisation 
 
 [/column]
 
@@ -615,10 +619,10 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 - raw nvenc API suitable for high-bandwidth compression
 
     + NvEncodeLowLatency timings ignores driver and memory initialisation  
-    (represents scenario of constant operation)
+    (represents scenario of constant streaming/encoding)
     
     + nvenc API useful on the microscope only, i.e. in streaming mode  
-    (at best if sqeazy pipeline in on the device too)
+    (at best if compression pipeline is on the device as well)
 
     + PCIe bus apparently a bottleneck
     
@@ -632,7 +636,7 @@ $ nvprof ffmpeg -i input.y4m -c:v nvenc_h264 -preset llhp -2pass 0 -gpu 1 -y out
 <center style="font-size: 1.25em">
 For questions, concerns or suggestions:
   
-[Open an issue!](https://github.com/psteinb/gtc2017/issues)
+[Open an issue, please!](https://github.com/psteinb/gtc2017/issues)
 
 </center>
 
